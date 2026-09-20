@@ -5,3 +5,5 @@ __pycache__/
 *.zip
 node_modules/
 test-results/
+research/*.csv
+research/build-open-questions.ps1
