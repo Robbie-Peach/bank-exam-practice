@@ -1,0 +1,141 @@
+{
+  "checkedAt": "2026-09-20",
+  "officialPastPaperFound": false,
+  "officialPastPaperConclusion": "本轮官方目录和关键词检索未找到公开完整历年试卷，不代表证明其绝不公开",
+  "resources": [
+    {
+      "id": "past-law-233",
+      "kind": "recalled_past",
+      "priority": 1,
+      "subject": "law",
+      "title": "法律法规｜2026年6月考生回忆版",
+      "url": "https://ks.233.com/384/2",
+      "provider": "233网校",
+      "upstreamClaimedCount": 99,
+      "distribution": "link_only",
+      "note": "机构回忆版，不是协会官方发布试卷；外部题数不计入本站"
+    },
+    {
+      "id": "past-wealth-233",
+      "kind": "recalled_past",
+      "priority": 1,
+      "subject": "wealth",
+      "title": "个人理财｜2026年6月考生回忆版",
+      "url": "https://ks.233.com/385/2",
+      "provider": "233网校",
+      "upstreamClaimedCount": 115,
+      "distribution": "link_only",
+      "note": "机构回忆版；本站未获整库公开转载许可"
+    },
+    {
+      "id": "article-law-233",
+      "kind": "recalled_past",
+      "priority": 1,
+      "subject": "law",
+      "title": "法律法规｜2026年6月13日考后答案文章",
+      "url": "https://www.233.com/ccbp/zhenti/ggjc/202606/04090728337898.html",
+      "provider": "233网校",
+      "distribution": "link_only"
+    },
+    {
+      "id": "article-wealth-233",
+      "kind": "recalled_past",
+      "priority": 1,
+      "subject": "wealth",
+      "title": "个人理财｜2026年6月13日考后答案文章",
+      "url": "https://m.233.com/ccbp/zhenti/grlc/202606/04095618301019.html",
+      "provider": "233网校",
+      "distribution": "link_only"
+    },
+    {
+      "id": "book-law-official",
+      "kind": "official_textbook",
+      "priority": 2,
+      "subject": "law",
+      "title": "法律法规官方教材（2024年版）",
+      "url": "https://www.china-cba.net/Index/show/catid/309/id/43900.html",
+      "provider": "中国银行业协会／中国金融出版社",
+      "distribution": "link_only",
+      "note": "官方教材，不等于公开习题库"
+    },
+    {
+      "id": "book-wealth-official",
+      "kind": "official_textbook",
+      "priority": 2,
+      "subject": "wealth",
+      "title": "个人理财初级官方教材（2023年版）",
+      "url": "https://www.china-cba.net/Index/show/catid/309/id/42384.html",
+      "provider": "中国银行业协会／中国金融出版社",
+      "distribution": "link_only",
+      "note": "官方教材，不等于公开习题库"
+    },
+    {
+      "id": "book-wealth-tup",
+      "kind": "publication",
+      "priority": 2,
+      "subject": "wealth",
+      "title": "个人理财讲义·真题·预测全攻略（历史版本备查）",
+      "url": "https://www.tup.tsinghua.edu.cn/booksCenter/book_07064901.html",
+      "provider": "清华大学出版社",
+      "isbn": "9787302464532",
+      "publicationDate": "2017-03-01",
+      "distribution": "link_only",
+      "note": "版本较旧，法规内容须查新；出版真实性已验证，未发现开放转载许可"
+    },
+    {
+      "id": "book-law-tup",
+      "kind": "publication",
+      "priority": 2,
+      "subject": "law",
+      "title": "法律法规初级过关必备（历史版本备查）",
+      "url": "https://www.tup.com.cn/booksCenter/book_06482501.html",
+      "provider": "清华大学出版社",
+      "isbn": "9787302441694",
+      "publicationDate": "2016-08-01",
+      "distribution": "link_only",
+      "note": "版本较旧；非官方配套习题，不作现行主资料"
+    },
+    {
+      "id": "outline-law",
+      "kind": "official_outline",
+      "subject": "law",
+      "title": "法律法规初级官方大纲",
+      "url": "https://www.china-cba.net/Index/show/catid/70/id/39302.html",
+      "provider": "中国银行业协会",
+      "publicationDate": "2021-04-15",
+      "distribution": "reference"
+    },
+    {
+      "id": "outline-wealth",
+      "kind": "official_outline",
+      "subject": "wealth",
+      "title": "个人理财初级官方大纲",
+      "url": "https://www.china-cba.net/Index/show/catid/70/id/43162.html",
+      "provider": "中国银行业协会",
+      "publicationDate": "2024-08-22",
+      "distribution": "reference"
+    },
+    {
+      "id": "fineval",
+      "kind": "open_benchmark",
+      "subject": "mixed",
+      "title": "FinEval 开放学术评测练习（审选15题）",
+      "url": "https://huggingface.co/datasets/SUFE-AIFLM-Lab/FinEval",
+      "provider": "SUFE-AIFLM-Lab",
+      "license": "CC-BY-NC-SA-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "paperUrl": "https://aclanthology.org/2025.naacl-long.318.pdf",
+      "downloadUrl": "https://huggingface.co/datasets/SUFE-AIFLM-Lab/FinEval/resolve/main/FinEval.zip",
+      "sha256": "44467786CFCEAB0783959FFB674598669207D28122ED6104F837F26A4F926764",
+      "counts": {
+        "dev": 5,
+        "val": 116,
+        "test": 299,
+        "withAnswers": 121,
+        "publishedByThisTask": 15
+      },
+      "distribution": "reviewed_subset",
+      "note": "收录15道逐题审校练习，非官方真题、非已认证出版物题。数据及新增解释遵循CC-BY-NC-SA 4.0，保留署名与同许可非商业使用。"
+    }
+  ]
+}

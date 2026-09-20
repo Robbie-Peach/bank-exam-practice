@@ -1,0 +1,2949 @@
+{
+  "checkedAt": "2026-09-20",
+  "archiveSha256": "44467786CFCEAB0783959FFB674598669207D28122ED6104F837F26A4F926764",
+  "total": 420,
+  "included": 15,
+  "excluded": 405,
+  "decisions": [
+    {
+      "split": "dev",
+      "originalId": "0",
+      "originalRecord": 1,
+      "decision": "exclude",
+      "reason": "未纳入；旧分类或其他专业细节，本次两科精选"
+    },
+    {
+      "split": "dev",
+      "originalId": "1",
+      "originalRecord": 2,
+      "decision": "exclude",
+      "reason": "未纳入；旧分类或其他专业细节，本次两科精选"
+    },
+    {
+      "split": "dev",
+      "originalId": "2",
+      "originalRecord": 3,
+      "decision": "exclude",
+      "reason": "未纳入；旧分类或其他专业细节，本次两科精选"
+    },
+    {
+      "split": "dev",
+      "originalId": "3",
+      "originalRecord": 4,
+      "decision": "exclude",
+      "reason": "未纳入；旧分类或其他专业细节，本次两科精选"
+    },
+    {
+      "split": "dev",
+      "originalId": "4",
+      "originalRecord": 5,
+      "decision": "exclude",
+      "reason": "未纳入；旧分类或其他专业细节，本次两科精选"
+    },
+    {
+      "split": "val",
+      "originalId": "0",
+      "originalRecord": 1,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "1",
+      "originalRecord": 2,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "2",
+      "originalRecord": 3,
+      "decision": "include",
+      "reason": "入选；原文和原答案保持；新增解析与核验依据"
+    },
+    {
+      "split": "val",
+      "originalId": "3",
+      "originalRecord": 4,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "4",
+      "originalRecord": 5,
+      "decision": "exclude",
+      "reason": "法规时效风险，隔离"
+    },
+    {
+      "split": "val",
+      "originalId": "5",
+      "originalRecord": 6,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "6",
+      "originalRecord": 7,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "7",
+      "originalRecord": 8,
+      "decision": "include",
+      "reason": "入选；原文和原答案保持；新增解析与核验依据"
+    },
+    {
+      "split": "val",
+      "originalId": "8",
+      "originalRecord": 9,
+      "decision": "exclude",
+      "reason": "法规时效风险，隔离"
+    },
+    {
+      "split": "val",
+      "originalId": "9",
+      "originalRecord": 10,
+      "decision": "include",
+      "reason": "入选；原文和原答案保持；新增解析与核验依据"
+    },
+    {
+      "split": "val",
+      "originalId": "10",
+      "originalRecord": 11,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "11",
+      "originalRecord": 12,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "12",
+      "originalRecord": 13,
+      "decision": "include",
+      "reason": "入选；原文和原答案保持；新增解析与核验依据"
+    },
+    {
+      "split": "val",
+      "originalId": "13",
+      "originalRecord": 14,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "14",
+      "originalRecord": 15,
+      "decision": "exclude",
+      "reason": "歧义、近似、条件不足或旧表述，隔离；详见ATTRIBUTION.md"
+    },
+    {
+      "split": "val",
+      "originalId": "15",
+      "originalRecord": 16,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "16",
+      "originalRecord": 17,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "17",
+      "originalRecord": 18,
+      "decision": "include",
+      "reason": "入选；原文和原答案保持；新增解析与核验依据"
+    },
+    {
+      "split": "val",
+      "originalId": "18",
+      "originalRecord": 19,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "19",
+      "originalRecord": 20,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "20",
+      "originalRecord": 21,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "21",
+      "originalRecord": 22,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "22",
+      "originalRecord": 23,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "23",
+      "originalRecord": 24,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "24",
+      "originalRecord": 25,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "25",
+      "originalRecord": 26,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "26",
+      "originalRecord": 27,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "27",
+      "originalRecord": 28,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "28",
+      "originalRecord": 29,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "29",
+      "originalRecord": 30,
+      "decision": "include",
+      "reason": "入选；原文和原答案保持；新增解析与核验依据"
+    },
+    {
+      "split": "val",
+      "originalId": "30",
+      "originalRecord": 31,
+      "decision": "exclude",
+      "reason": "歧义、近似、条件不足或旧表述，隔离；详见ATTRIBUTION.md"
+    },
+    {
+      "split": "val",
+      "originalId": "31",
+      "originalRecord": 32,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "32",
+      "originalRecord": 33,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "33",
+      "originalRecord": 34,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "34",
+      "originalRecord": 35,
+      "decision": "exclude",
+      "reason": "法规时效风险，隔离"
+    },
+    {
+      "split": "val",
+      "originalId": "35",
+      "originalRecord": 36,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "36",
+      "originalRecord": 37,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "37",
+      "originalRecord": 38,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "38",
+      "originalRecord": 39,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "39",
+      "originalRecord": 40,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "40",
+      "originalRecord": 41,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "41",
+      "originalRecord": 42,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "42",
+      "originalRecord": 43,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "43",
+      "originalRecord": 44,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "44",
+      "originalRecord": 45,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "45",
+      "originalRecord": 46,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "46",
+      "originalRecord": 47,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "47",
+      "originalRecord": 48,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "48",
+      "originalRecord": 49,
+      "decision": "exclude",
+      "reason": "歧义、近似、条件不足或旧表述，隔离；详见ATTRIBUTION.md"
+    },
+    {
+      "split": "val",
+      "originalId": "49",
+      "originalRecord": 50,
+      "decision": "include",
+      "reason": "入选；原文和原答案保持；新增解析与核验依据"
+    },
+    {
+      "split": "val",
+      "originalId": "50",
+      "originalRecord": 51,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "51",
+      "originalRecord": 52,
+      "decision": "include",
+      "reason": "入选；原文和原答案保持；新增解析与核验依据"
+    },
+    {
+      "split": "val",
+      "originalId": "52",
+      "originalRecord": 53,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "53",
+      "originalRecord": 54,
+      "decision": "exclude",
+      "reason": "歧义、近似、条件不足或旧表述，隔离；详见ATTRIBUTION.md"
+    },
+    {
+      "split": "val",
+      "originalId": "54",
+      "originalRecord": 55,
+      "decision": "exclude",
+      "reason": "歧义、近似、条件不足或旧表述，隔离；详见ATTRIBUTION.md"
+    },
+    {
+      "split": "val",
+      "originalId": "55",
+      "originalRecord": 56,
+      "decision": "include",
+      "reason": "入选；原文和原答案保持；新增解析与核验依据"
+    },
+    {
+      "split": "val",
+      "originalId": "56",
+      "originalRecord": 57,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "57",
+      "originalRecord": 58,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "58",
+      "originalRecord": 59,
+      "decision": "exclude",
+      "reason": "歧义、近似、条件不足或旧表述，隔离；详见ATTRIBUTION.md"
+    },
+    {
+      "split": "val",
+      "originalId": "59",
+      "originalRecord": 60,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "60",
+      "originalRecord": 61,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "61",
+      "originalRecord": 62,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "62",
+      "originalRecord": 63,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "63",
+      "originalRecord": 64,
+      "decision": "exclude",
+      "reason": "歧义、近似、条件不足或旧表述，隔离；详见ATTRIBUTION.md"
+    },
+    {
+      "split": "val",
+      "originalId": "64",
+      "originalRecord": 65,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "65",
+      "originalRecord": 66,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "66",
+      "originalRecord": 67,
+      "decision": "include",
+      "reason": "入选；原文和原答案保持；新增解析与核验依据"
+    },
+    {
+      "split": "val",
+      "originalId": "67",
+      "originalRecord": 68,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "68",
+      "originalRecord": 69,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "69",
+      "originalRecord": 70,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "70",
+      "originalRecord": 71,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "71",
+      "originalRecord": 72,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "72",
+      "originalRecord": 73,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "73",
+      "originalRecord": 74,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "74",
+      "originalRecord": 75,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "75",
+      "originalRecord": 76,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "76",
+      "originalRecord": 77,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "77",
+      "originalRecord": 78,
+      "decision": "include",
+      "reason": "入选；原文和原答案保持；新增解析与核验依据"
+    },
+    {
+      "split": "val",
+      "originalId": "78",
+      "originalRecord": 79,
+      "decision": "include",
+      "reason": "入选；原文和原答案保持；新增解析与核验依据"
+    },
+    {
+      "split": "val",
+      "originalId": "79",
+      "originalRecord": 80,
+      "decision": "exclude",
+      "reason": "歧义、近似、条件不足或旧表述，隔离；详见ATTRIBUTION.md"
+    },
+    {
+      "split": "val",
+      "originalId": "80",
+      "originalRecord": 81,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "81",
+      "originalRecord": 82,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "82",
+      "originalRecord": 83,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "83",
+      "originalRecord": 84,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "84",
+      "originalRecord": 85,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "85",
+      "originalRecord": 86,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "86",
+      "originalRecord": 87,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "87",
+      "originalRecord": 88,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "88",
+      "originalRecord": 89,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "89",
+      "originalRecord": 90,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "90",
+      "originalRecord": 91,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "91",
+      "originalRecord": 92,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "92",
+      "originalRecord": 93,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "93",
+      "originalRecord": 94,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "94",
+      "originalRecord": 95,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "95",
+      "originalRecord": 96,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "96",
+      "originalRecord": 97,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "97",
+      "originalRecord": 98,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "98",
+      "originalRecord": 99,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "99",
+      "originalRecord": 100,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "100",
+      "originalRecord": 101,
+      "decision": "include",
+      "reason": "入选；原文和原答案保持；新增解析与核验依据"
+    },
+    {
+      "split": "val",
+      "originalId": "101",
+      "originalRecord": 102,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "102",
+      "originalRecord": 103,
+      "decision": "exclude",
+      "reason": "歧义、近似、条件不足或旧表述，隔离；详见ATTRIBUTION.md"
+    },
+    {
+      "split": "val",
+      "originalId": "103",
+      "originalRecord": 104,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "104",
+      "originalRecord": 105,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "105",
+      "originalRecord": 106,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "106",
+      "originalRecord": 107,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "107",
+      "originalRecord": 108,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "108",
+      "originalRecord": 109,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "109",
+      "originalRecord": 110,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "110",
+      "originalRecord": 111,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "111",
+      "originalRecord": 112,
+      "decision": "include",
+      "reason": "入选；原文和原答案保持；新增解析与核验依据"
+    },
+    {
+      "split": "val",
+      "originalId": "112",
+      "originalRecord": 113,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "113",
+      "originalRecord": 114,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "val",
+      "originalId": "114",
+      "originalRecord": 115,
+      "decision": "include",
+      "reason": "入选；原文和原答案保持；新增解析与核验依据"
+    },
+    {
+      "split": "val",
+      "originalId": "115",
+      "originalRecord": 116,
+      "decision": "exclude",
+      "reason": "未完成本轮逐条依据核验或偏离两科精选范围，不发布；不据此判定必然错误"
+    },
+    {
+      "split": "test",
+      "originalId": "0",
+      "originalRecord": 1,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "1",
+      "originalRecord": 2,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "2",
+      "originalRecord": 3,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "3",
+      "originalRecord": 4,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "4",
+      "originalRecord": 5,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "5",
+      "originalRecord": 6,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "6",
+      "originalRecord": 7,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "7",
+      "originalRecord": 8,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "8",
+      "originalRecord": 9,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "9",
+      "originalRecord": 10,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "10",
+      "originalRecord": 11,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "11",
+      "originalRecord": 12,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "12",
+      "originalRecord": 13,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "13",
+      "originalRecord": 14,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "14",
+      "originalRecord": 15,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "15",
+      "originalRecord": 16,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "16",
+      "originalRecord": 17,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "17",
+      "originalRecord": 18,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "18",
+      "originalRecord": 19,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "19",
+      "originalRecord": 20,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "20",
+      "originalRecord": 21,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "21",
+      "originalRecord": 22,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "22",
+      "originalRecord": 23,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "23",
+      "originalRecord": 24,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "24",
+      "originalRecord": 25,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "25",
+      "originalRecord": 26,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "26",
+      "originalRecord": 27,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "27",
+      "originalRecord": 28,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "28",
+      "originalRecord": 29,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "29",
+      "originalRecord": 30,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "30",
+      "originalRecord": 31,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "31",
+      "originalRecord": 32,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "32",
+      "originalRecord": 33,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "33",
+      "originalRecord": 34,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "34",
+      "originalRecord": 35,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "35",
+      "originalRecord": 36,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "36",
+      "originalRecord": 37,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "37",
+      "originalRecord": 38,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "38",
+      "originalRecord": 39,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "39",
+      "originalRecord": 40,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "40",
+      "originalRecord": 41,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "41",
+      "originalRecord": 42,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "42",
+      "originalRecord": 43,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "43",
+      "originalRecord": 44,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "44",
+      "originalRecord": 45,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "45",
+      "originalRecord": 46,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "46",
+      "originalRecord": 47,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "47",
+      "originalRecord": 48,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "48",
+      "originalRecord": 49,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "49",
+      "originalRecord": 50,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "50",
+      "originalRecord": 51,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "51",
+      "originalRecord": 52,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "52",
+      "originalRecord": 53,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "53",
+      "originalRecord": 54,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "54",
+      "originalRecord": 55,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "55",
+      "originalRecord": 56,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "56",
+      "originalRecord": 57,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "57",
+      "originalRecord": 58,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "58",
+      "originalRecord": 59,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "59",
+      "originalRecord": 60,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "60",
+      "originalRecord": 61,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "61",
+      "originalRecord": 62,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "62",
+      "originalRecord": 63,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "63",
+      "originalRecord": 64,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "64",
+      "originalRecord": 65,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "65",
+      "originalRecord": 66,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "66",
+      "originalRecord": 67,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "67",
+      "originalRecord": 68,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "68",
+      "originalRecord": 69,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "69",
+      "originalRecord": 70,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "70",
+      "originalRecord": 71,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "71",
+      "originalRecord": 72,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "72",
+      "originalRecord": 73,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "73",
+      "originalRecord": 74,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "74",
+      "originalRecord": 75,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "75",
+      "originalRecord": 76,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "76",
+      "originalRecord": 77,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "77",
+      "originalRecord": 78,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "78",
+      "originalRecord": 79,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "79",
+      "originalRecord": 80,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "80",
+      "originalRecord": 81,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "81",
+      "originalRecord": 82,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "82",
+      "originalRecord": 83,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "83",
+      "originalRecord": 84,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "84",
+      "originalRecord": 85,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "85",
+      "originalRecord": 86,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "86",
+      "originalRecord": 87,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "87",
+      "originalRecord": 88,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "88",
+      "originalRecord": 89,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "89",
+      "originalRecord": 90,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "90",
+      "originalRecord": 91,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "91",
+      "originalRecord": 92,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "92",
+      "originalRecord": 93,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "93",
+      "originalRecord": 94,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "94",
+      "originalRecord": 95,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "95",
+      "originalRecord": 96,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "96",
+      "originalRecord": 97,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "97",
+      "originalRecord": 98,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "98",
+      "originalRecord": 99,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "99",
+      "originalRecord": 100,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "100",
+      "originalRecord": 101,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "101",
+      "originalRecord": 102,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "102",
+      "originalRecord": 103,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "103",
+      "originalRecord": 104,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "104",
+      "originalRecord": 105,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "105",
+      "originalRecord": 106,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "106",
+      "originalRecord": 107,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "107",
+      "originalRecord": 108,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "108",
+      "originalRecord": 109,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "109",
+      "originalRecord": 110,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "110",
+      "originalRecord": 111,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "111",
+      "originalRecord": 112,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "112",
+      "originalRecord": 113,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "113",
+      "originalRecord": 114,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "114",
+      "originalRecord": 115,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "115",
+      "originalRecord": 116,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "116",
+      "originalRecord": 117,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "117",
+      "originalRecord": 118,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "118",
+      "originalRecord": 119,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "119",
+      "originalRecord": 120,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "120",
+      "originalRecord": 121,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "121",
+      "originalRecord": 122,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "122",
+      "originalRecord": 123,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "123",
+      "originalRecord": 124,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "124",
+      "originalRecord": 125,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "125",
+      "originalRecord": 126,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "126",
+      "originalRecord": 127,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "127",
+      "originalRecord": 128,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "128",
+      "originalRecord": 129,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "129",
+      "originalRecord": 130,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "130",
+      "originalRecord": 131,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "131",
+      "originalRecord": 132,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "132",
+      "originalRecord": 133,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "133",
+      "originalRecord": 134,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "134",
+      "originalRecord": 135,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "135",
+      "originalRecord": 136,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "136",
+      "originalRecord": 137,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "137",
+      "originalRecord": 138,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "138",
+      "originalRecord": 139,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "139",
+      "originalRecord": 140,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "140",
+      "originalRecord": 141,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "141",
+      "originalRecord": 142,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "142",
+      "originalRecord": 143,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "143",
+      "originalRecord": 144,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "144",
+      "originalRecord": 145,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "145",
+      "originalRecord": 146,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "146",
+      "originalRecord": 147,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "147",
+      "originalRecord": 148,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "148",
+      "originalRecord": 149,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "149",
+      "originalRecord": 150,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "150",
+      "originalRecord": 151,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "151",
+      "originalRecord": 152,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "152",
+      "originalRecord": 153,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "153",
+      "originalRecord": 154,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "154",
+      "originalRecord": 155,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "155",
+      "originalRecord": 156,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "156",
+      "originalRecord": 157,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "157",
+      "originalRecord": 158,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "158",
+      "originalRecord": 159,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "159",
+      "originalRecord": 160,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "160",
+      "originalRecord": 161,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "161",
+      "originalRecord": 162,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "162",
+      "originalRecord": 163,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "163",
+      "originalRecord": 164,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "164",
+      "originalRecord": 165,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "165",
+      "originalRecord": 166,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "166",
+      "originalRecord": 167,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "167",
+      "originalRecord": 168,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "168",
+      "originalRecord": 169,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "169",
+      "originalRecord": 170,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "170",
+      "originalRecord": 171,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "171",
+      "originalRecord": 172,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "172",
+      "originalRecord": 173,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "173",
+      "originalRecord": 174,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "174",
+      "originalRecord": 175,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "175",
+      "originalRecord": 176,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "176",
+      "originalRecord": 177,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "177",
+      "originalRecord": 178,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "178",
+      "originalRecord": 179,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "179",
+      "originalRecord": 180,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "180",
+      "originalRecord": 181,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "181",
+      "originalRecord": 182,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "182",
+      "originalRecord": 183,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "183",
+      "originalRecord": 184,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "184",
+      "originalRecord": 185,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "185",
+      "originalRecord": 186,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "186",
+      "originalRecord": 187,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "187",
+      "originalRecord": 188,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "188",
+      "originalRecord": 189,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "189",
+      "originalRecord": 190,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "190",
+      "originalRecord": 191,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "191",
+      "originalRecord": 192,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "192",
+      "originalRecord": 193,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "193",
+      "originalRecord": 194,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "194",
+      "originalRecord": 195,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "195",
+      "originalRecord": 196,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "196",
+      "originalRecord": 197,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "197",
+      "originalRecord": 198,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "198",
+      "originalRecord": 199,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "199",
+      "originalRecord": 200,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "200",
+      "originalRecord": 201,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "201",
+      "originalRecord": 202,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "202",
+      "originalRecord": 203,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "203",
+      "originalRecord": 204,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "204",
+      "originalRecord": 205,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "205",
+      "originalRecord": 206,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "206",
+      "originalRecord": 207,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "207",
+      "originalRecord": 208,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "208",
+      "originalRecord": 209,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "209",
+      "originalRecord": 210,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "210",
+      "originalRecord": 211,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "211",
+      "originalRecord": 212,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "212",
+      "originalRecord": 213,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "213",
+      "originalRecord": 214,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "214",
+      "originalRecord": 215,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "215",
+      "originalRecord": 216,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "216",
+      "originalRecord": 217,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "217",
+      "originalRecord": 218,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "218",
+      "originalRecord": 219,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "219",
+      "originalRecord": 220,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "220",
+      "originalRecord": 221,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "221",
+      "originalRecord": 222,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "222",
+      "originalRecord": 223,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "223",
+      "originalRecord": 224,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "224",
+      "originalRecord": 225,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "225",
+      "originalRecord": 226,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "226",
+      "originalRecord": 227,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "227",
+      "originalRecord": 228,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "228",
+      "originalRecord": 229,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "229",
+      "originalRecord": 230,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "230",
+      "originalRecord": 231,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "231",
+      "originalRecord": 232,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "232",
+      "originalRecord": 233,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "233",
+      "originalRecord": 234,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "234",
+      "originalRecord": 235,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "235",
+      "originalRecord": 236,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "236",
+      "originalRecord": 237,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "237",
+      "originalRecord": 238,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "238",
+      "originalRecord": 239,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "239",
+      "originalRecord": 240,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "240",
+      "originalRecord": 241,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "241",
+      "originalRecord": 242,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "242",
+      "originalRecord": 243,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "243",
+      "originalRecord": 244,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "244",
+      "originalRecord": 245,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "245",
+      "originalRecord": 246,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "246",
+      "originalRecord": 247,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "247",
+      "originalRecord": 248,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "248",
+      "originalRecord": 249,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "249",
+      "originalRecord": 250,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "250",
+      "originalRecord": 251,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "251",
+      "originalRecord": 252,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "252",
+      "originalRecord": 253,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "253",
+      "originalRecord": 254,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "254",
+      "originalRecord": 255,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "255",
+      "originalRecord": 256,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "256",
+      "originalRecord": 257,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "257",
+      "originalRecord": 258,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "258",
+      "originalRecord": 259,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "259",
+      "originalRecord": 260,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "260",
+      "originalRecord": 261,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "261",
+      "originalRecord": 262,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "262",
+      "originalRecord": 263,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "263",
+      "originalRecord": 264,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "264",
+      "originalRecord": 265,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "265",
+      "originalRecord": 266,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "266",
+      "originalRecord": 267,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "267",
+      "originalRecord": 268,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "268",
+      "originalRecord": 269,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "269",
+      "originalRecord": 270,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "270",
+      "originalRecord": 271,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "271",
+      "originalRecord": 272,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "272",
+      "originalRecord": 273,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "273",
+      "originalRecord": 274,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "274",
+      "originalRecord": 275,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "275",
+      "originalRecord": 276,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "276",
+      "originalRecord": 277,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "277",
+      "originalRecord": 278,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "278",
+      "originalRecord": 279,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "279",
+      "originalRecord": 280,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "280",
+      "originalRecord": 281,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "281",
+      "originalRecord": 282,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "282",
+      "originalRecord": 283,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "283",
+      "originalRecord": 284,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "284",
+      "originalRecord": 285,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "285",
+      "originalRecord": 286,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "286",
+      "originalRecord": 287,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "287",
+      "originalRecord": 288,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "288",
+      "originalRecord": 289,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "289",
+      "originalRecord": 290,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "290",
+      "originalRecord": 291,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "291",
+      "originalRecord": 292,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "292",
+      "originalRecord": 293,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "293",
+      "originalRecord": 294,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "294",
+      "originalRecord": 295,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "295",
+      "originalRecord": 296,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "296",
+      "originalRecord": 297,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "297",
+      "originalRecord": 298,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    },
+    {
+      "split": "test",
+      "originalId": "298",
+      "originalRecord": 299,
+      "decision": "exclude",
+      "reason": "无上游答案，排除"
+    }
+  ]
+}

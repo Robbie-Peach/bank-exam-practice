@@ -1,0 +1,14 @@
+const fs=require('node:fs'),vm=require('node:vm'),crypto=require('node:crypto');
+const path=require('node:path');
+const root=path.resolve(__dirname,'..');
+const file=path.join(root,'baseline','bank_exam_quiz.html');
+const html=fs.readFileSync(file,'utf8');
+const match=html.match(/const Q=(\[[\s\S]*?\]);\s*let state=/);
+if(!match)throw Error('Original question array not found');
+const original=vm.runInNewContext('('+match[1]+')',Object.create(null),{timeout:1000});
+if(original.length!==36)throw Error('Expected original 36 questions');
+const types={'单选':'single','多选':'multiple','判断':'boolean'};
+const questions=original.map(q=>({id:'v1-'+String(q.id).padStart(3,'0'),subject:q.s==='wealth'?'finance':'law',chapter:q.k,type:types[q.t],question:q.q,options:q.o,answer:q.a,explanation:q.e,source:{kind:'original',title:'V1 保留 · GPT 原创练习',url:q.s==='wealth'?'https://www.china-cba.net/Index/show/catid/70/id/43162.html':'https://www.china-cba.net/Index/show/catid/70/id/39302.html',note:'来自用户提供的原始 HTML；保留题干、选项、答案与解析。下方链接为考点大纲，不是本题出处。',verifiedAt:'2026-09-20'},tags:[q.k],difficulty:1}));
+fs.writeFileSync(path.join(root,'data','v1-questions.json'),JSON.stringify(questions,null,2)+'\n');
+fs.writeFileSync(path.join(root,'baseline','snapshot.json'),JSON.stringify({originalHtmlRecovered:true,originalPath:'C:/Users/Cx200/AppData/Local/Temp/codex-file-preview-rUxavP/bank_exam_quiz.html',sha256:crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex'),questions:36},null,2)+'\n');
+console.log('V1_IMPORTED=36; SOURCE_UNCHANGED=YES');

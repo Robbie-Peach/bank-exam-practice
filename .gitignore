@@ -1,0 +1,7 @@
+artifacts/
+baseline/
+research/downloads/
+__pycache__/
+*.zip
+node_modules/
+test-results/

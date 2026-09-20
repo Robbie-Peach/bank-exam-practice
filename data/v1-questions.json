@@ -1,0 +1,1013 @@
+[
+  {
+    "id": "v1-001",
+    "subject": "law",
+    "chapter": "银行基础",
+    "type": "single",
+    "question": "我国商业银行最基本、最主要的负债业务通常是下列哪一项？",
+    "options": [
+      "吸收公众存款",
+      "发放贷款",
+      "证券投资",
+      "代理保险"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "吸收存款形成商业银行资金来源，是典型负债业务；贷款和投资主要属于资产业务。",
+    "source": {
+      "kind": "original",
+      "title": "V1 保留 · GPT 原创练习",
+      "url": "https://www.china-cba.net/Index/show/catid/70/id/39302.html",
+      "note": "来自用户提供的原始 HTML；保留题干、选项、答案与解析。下方链接为考点大纲，不是本题出处。",
+      "verifiedAt": "2026-09-20"
+    },
+    "tags": [
+      "银行基础"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "v1-002",
+    "subject": "law",
+    "chapter": "银行基础",
+    "type": "single",
+    "question": "下列项目中，通常属于商业银行资产业务的是：",
+    "options": [
+      "吸收存款",
+      "同业存放",
+      "发放贷款",
+      "发行金融债券"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "贷款形成银行对客户的债权，属于资产；存款、同业存放和发行债券通常形成负债。",
+    "source": {
+      "kind": "original",
+      "title": "V1 保留 · GPT 原创练习",
+      "url": "https://www.china-cba.net/Index/show/catid/70/id/39302.html",
+      "note": "来自用户提供的原始 HTML；保留题干、选项、答案与解析。下方链接为考点大纲，不是本题出处。",
+      "verifiedAt": "2026-09-20"
+    },
+    "tags": [
+      "银行基础"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "v1-003",
+    "subject": "law",
+    "chapter": "职业操守",
+    "type": "boolean",
+    "question": "银行从业人员只要没有直接收取现金，就可以接受客户提供的任何贵重礼品。",
+    "options": [
+      "正确",
+      "错误"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "错误。是否违规不能只看是否收取现金，还要考虑礼品价值、利益冲突、廉洁及所在机构制度。",
+    "source": {
+      "kind": "original",
+      "title": "V1 保留 · GPT 原创练习",
+      "url": "https://www.china-cba.net/Index/show/catid/70/id/39302.html",
+      "note": "来自用户提供的原始 HTML；保留题干、选项、答案与解析。下方链接为考点大纲，不是本题出处。",
+      "verifiedAt": "2026-09-20"
+    },
+    "tags": [
+      "职业操守"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "v1-004",
+    "subject": "law",
+    "chapter": "货币政策",
+    "type": "single",
+    "question": "中央银行提高法定存款准备金率，在其他条件不变时，通常体现何种政策取向？",
+    "options": [
+      "扩张性",
+      "紧缩性",
+      "财政扩张",
+      "汇率自由化"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "提高准备金率会减少银行体系可用于信贷扩张的资金，通常具有紧缩效果。",
+    "source": {
+      "kind": "original",
+      "title": "V1 保留 · GPT 原创练习",
+      "url": "https://www.china-cba.net/Index/show/catid/70/id/39302.html",
+      "note": "来自用户提供的原始 HTML；保留题干、选项、答案与解析。下方链接为考点大纲，不是本题出处。",
+      "verifiedAt": "2026-09-20"
+    },
+    "tags": [
+      "货币政策"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "v1-005",
+    "subject": "law",
+    "chapter": "风险管理",
+    "type": "multiple",
+    "question": "商业银行面临的主要风险类型通常包括哪些？",
+    "options": [
+      "信用风险",
+      "市场风险",
+      "操作风险",
+      "流动性风险"
+    ],
+    "answer": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explanation": "四项均属于银行风险管理中的重要风险类别。",
+    "source": {
+      "kind": "original",
+      "title": "V1 保留 · GPT 原创练习",
+      "url": "https://www.china-cba.net/Index/show/catid/70/id/39302.html",
+      "note": "来自用户提供的原始 HTML；保留题干、选项、答案与解析。下方链接为考点大纲，不是本题出处。",
+      "verifiedAt": "2026-09-20"
+    },
+    "tags": [
+      "风险管理"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "v1-006",
+    "subject": "law",
+    "chapter": "存款业务",
+    "type": "single",
+    "question": "客户将资金存入银行并可按约定条件支取，从法律关系上看，银行通常成为：",
+    "options": [
+      "债权人",
+      "债务人",
+      "担保人",
+      "受托保管人且资金所有权不转移"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "存款形成银行对存款人的负债，因此银行是债务人，存款人是债权人。",
+    "source": {
+      "kind": "original",
+      "title": "V1 保留 · GPT 原创练习",
+      "url": "https://www.china-cba.net/Index/show/catid/70/id/39302.html",
+      "note": "来自用户提供的原始 HTML；保留题干、选项、答案与解析。下方链接为考点大纲，不是本题出处。",
+      "verifiedAt": "2026-09-20"
+    },
+    "tags": [
+      "存款业务"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "v1-007",
+    "subject": "law",
+    "chapter": "合规",
+    "type": "boolean",
+    "question": "客户身份识别仅在客户第一次开户时完成即可，之后无需持续关注。",
+    "options": [
+      "正确",
+      "错误"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "错误。客户尽职调查与风险管理具有持续性，应根据业务关系和风险变化更新、核实相关信息。",
+    "source": {
+      "kind": "original",
+      "title": "V1 保留 · GPT 原创练习",
+      "url": "https://www.china-cba.net/Index/show/catid/70/id/39302.html",
+      "note": "来自用户提供的原始 HTML；保留题干、选项、答案与解析。下方链接为考点大纲，不是本题出处。",
+      "verifiedAt": "2026-09-20"
+    },
+    "tags": [
+      "合规"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "v1-008",
+    "subject": "law",
+    "chapter": "金融市场",
+    "type": "single",
+    "question": "一般而言，期限在一年以内的金融工具交易市场称为：",
+    "options": [
+      "资本市场",
+      "货币市场",
+      "外汇市场",
+      "黄金市场"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "货币市场主要交易短期金融工具；资本市场通常对应中长期融资。",
+    "source": {
+      "kind": "original",
+      "title": "V1 保留 · GPT 原创练习",
+      "url": "https://www.china-cba.net/Index/show/catid/70/id/39302.html",
+      "note": "来自用户提供的原始 HTML；保留题干、选项、答案与解析。下方链接为考点大纲，不是本题出处。",
+      "verifiedAt": "2026-09-20"
+    },
+    "tags": [
+      "金融市场"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "v1-009",
+    "subject": "law",
+    "chapter": "银行业务",
+    "type": "multiple",
+    "question": "下列哪些通常属于商业银行中间业务或服务性业务的范畴？",
+    "options": [
+      "支付结算",
+      "代理业务",
+      "银行卡相关服务",
+      "贷款发放"
+    ],
+    "answer": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "支付结算、代理和银行卡服务具有典型中间业务属性；贷款属于资产业务。",
+    "source": {
+      "kind": "original",
+      "title": "V1 保留 · GPT 原创练习",
+      "url": "https://www.china-cba.net/Index/show/catid/70/id/39302.html",
+      "note": "来自用户提供的原始 HTML；保留题干、选项、答案与解析。下方链接为考点大纲，不是本题出处。",
+      "verifiedAt": "2026-09-20"
+    },
+    "tags": [
+      "银行业务"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "v1-010",
+    "subject": "law",
+    "chapter": "公司治理",
+    "type": "single",
+    "question": "银行建立内部控制体系的核心目的之一是：",
+    "options": [
+      "完全消除所有经营风险",
+      "保证任何业务都盈利",
+      "促进依法合规经营并控制风险",
+      "替代外部监管"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "内部控制旨在促进合规、风险控制和经营目标实现，但不可能完全消除风险，也不能替代监管。",
+    "source": {
+      "kind": "original",
+      "title": "V1 保留 · GPT 原创练习",
+      "url": "https://www.china-cba.net/Index/show/catid/70/id/39302.html",
+      "note": "来自用户提供的原始 HTML；保留题干、选项、答案与解析。下方链接为考点大纲，不是本题出处。",
+      "verifiedAt": "2026-09-20"
+    },
+    "tags": [
+      "公司治理"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "v1-011",
+    "subject": "law",
+    "chapter": "金融基础",
+    "type": "boolean",
+    "question": "债券价格与市场利率在其他条件不变时通常呈同方向变化。",
+    "options": [
+      "正确",
+      "错误"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "通常呈反方向变化：市场利率上升，既有固定收益债券的相对吸引力下降，价格往往下跌。",
+    "source": {
+      "kind": "original",
+      "title": "V1 保留 · GPT 原创练习",
+      "url": "https://www.china-cba.net/Index/show/catid/70/id/39302.html",
+      "note": "来自用户提供的原始 HTML；保留题干、选项、答案与解析。下方链接为考点大纲，不是本题出处。",
+      "verifiedAt": "2026-09-20"
+    },
+    "tags": [
+      "金融基础"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "v1-012",
+    "subject": "law",
+    "chapter": "信用风险",
+    "type": "single",
+    "question": "借款人因经营恶化无法按合同偿还贷款本息，银行主要面临的是：",
+    "options": [
+      "信用风险",
+      "市场风险",
+      "法律风险",
+      "战略风险"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "交易对手不能履约导致损失，是信用风险的典型情形。",
+    "source": {
+      "kind": "original",
+      "title": "V1 保留 · GPT 原创练习",
+      "url": "https://www.china-cba.net/Index/show/catid/70/id/39302.html",
+      "note": "来自用户提供的原始 HTML；保留题干、选项、答案与解析。下方链接为考点大纲，不是本题出处。",
+      "verifiedAt": "2026-09-20"
+    },
+    "tags": [
+      "信用风险"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "v1-013",
+    "subject": "law",
+    "chapter": "流动性风险",
+    "type": "single",
+    "question": "银行虽然资产总额充足，但短期内无法以合理成本获得足够资金履行到期支付义务，这主要体现：",
+    "options": [
+      "声誉风险",
+      "流动性风险",
+      "国别风险",
+      "市场风险"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "能否及时、以合理成本满足支付义务，是流动性风险的核心。",
+    "source": {
+      "kind": "original",
+      "title": "V1 保留 · GPT 原创练习",
+      "url": "https://www.china-cba.net/Index/show/catid/70/id/39302.html",
+      "note": "来自用户提供的原始 HTML；保留题干、选项、答案与解析。下方链接为考点大纲，不是本题出处。",
+      "verifiedAt": "2026-09-20"
+    },
+    "tags": [
+      "流动性风险"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "v1-014",
+    "subject": "law",
+    "chapter": "职业操守",
+    "type": "multiple",
+    "question": "银行从业人员处理客户信息时，较为恰当的做法包括：",
+    "options": [
+      "仅在授权和业务需要范围内使用",
+      "采取措施保护信息安全",
+      "随意向朋友讨论客户资产情况",
+      "遵守法律法规和机构制度"
+    ],
+    "answer": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "客户信息应遵循保密、授权、必要性和安全管理要求。",
+    "source": {
+      "kind": "original",
+      "title": "V1 保留 · GPT 原创练习",
+      "url": "https://www.china-cba.net/Index/show/catid/70/id/39302.html",
+      "note": "来自用户提供的原始 HTML；保留题干、选项、答案与解析。下方链接为考点大纲，不是本题出处。",
+      "verifiedAt": "2026-09-20"
+    },
+    "tags": [
+      "职业操守"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "v1-015",
+    "subject": "law",
+    "chapter": "贷款",
+    "type": "single",
+    "question": "银行在贷款审查中分析借款人的偿债能力，最直接服务于哪类风险控制？",
+    "options": [
+      "信用风险",
+      "汇率风险",
+      "操作风险",
+      "声誉风险"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "偿债能力直接关系借款人能否履约，是信用风险分析的重要部分。",
+    "source": {
+      "kind": "original",
+      "title": "V1 保留 · GPT 原创练习",
+      "url": "https://www.china-cba.net/Index/show/catid/70/id/39302.html",
+      "note": "来自用户提供的原始 HTML；保留题干、选项、答案与解析。下方链接为考点大纲，不是本题出处。",
+      "verifiedAt": "2026-09-20"
+    },
+    "tags": [
+      "贷款"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "v1-016",
+    "subject": "finance",
+    "chapter": "货币时间价值",
+    "type": "single",
+    "question": "在利率为正且其他条件相同的情况下，今天的100元与一年后的100元相比：",
+    "options": [
+      "今天的100元价值通常更高",
+      "一年后的100元价值一定更高",
+      "价值完全相同",
+      "无法进行任何比较"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "资金具有时间价值。正利率条件下，今天的资金可投资产生收益，因此现值更高。",
+    "source": {
+      "kind": "original",
+      "title": "V1 保留 · GPT 原创练习",
+      "url": "https://www.china-cba.net/Index/show/catid/70/id/43162.html",
+      "note": "来自用户提供的原始 HTML；保留题干、选项、答案与解析。下方链接为考点大纲，不是本题出处。",
+      "verifiedAt": "2026-09-20"
+    },
+    "tags": [
+      "货币时间价值"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "v1-017",
+    "subject": "finance",
+    "chapter": "复利",
+    "type": "single",
+    "question": "本金10,000元，年利率5%，按年复利，两年后的本利和约为：",
+    "options": [
+      "10,500元",
+      "11,000元",
+      "11,025元",
+      "12,500元"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "10,000×(1+5%)²=11,025元。",
+    "source": {
+      "kind": "original",
+      "title": "V1 保留 · GPT 原创练习",
+      "url": "https://www.china-cba.net/Index/show/catid/70/id/43162.html",
+      "note": "来自用户提供的原始 HTML；保留题干、选项、答案与解析。下方链接为考点大纲，不是本题出处。",
+      "verifiedAt": "2026-09-20"
+    },
+    "tags": [
+      "复利"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "v1-018",
+    "subject": "finance",
+    "chapter": "风险收益",
+    "type": "boolean",
+    "question": "一般而言，投资者要求的预期收益率越高，通常需要承担更高风险。",
+    "options": [
+      "正确",
+      "错误"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "风险与预期收益通常存在权衡关系。更高预期收益往往伴随更高不确定性，但不代表承担高风险必然获得高收益。",
+    "source": {
+      "kind": "original",
+      "title": "V1 保留 · GPT 原创练习",
+      "url": "https://www.china-cba.net/Index/show/catid/70/id/43162.html",
+      "note": "来自用户提供的原始 HTML；保留题干、选项、答案与解析。下方链接为考点大纲，不是本题出处。",
+      "verifiedAt": "2026-09-20"
+    },
+    "tags": [
+      "风险收益"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "v1-019",
+    "subject": "finance",
+    "chapter": "资产配置",
+    "type": "multiple",
+    "question": "进行家庭资产配置时，通常需要考虑哪些因素？",
+    "options": [
+      "风险承受能力",
+      "投资期限",
+      "流动性需求",
+      "财务目标"
+    ],
+    "answer": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explanation": "资产配置应综合客户目标、期限、流动性与风险承受能力，而非只看收益率。",
+    "source": {
+      "kind": "original",
+      "title": "V1 保留 · GPT 原创练习",
+      "url": "https://www.china-cba.net/Index/show/catid/70/id/43162.html",
+      "note": "来自用户提供的原始 HTML；保留题干、选项、答案与解析。下方链接为考点大纲，不是本题出处。",
+      "verifiedAt": "2026-09-20"
+    },
+    "tags": [
+      "资产配置"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "v1-020",
+    "subject": "finance",
+    "chapter": "债券",
+    "type": "single",
+    "question": "其他条件不变，市场利率上升时，已有固定票面利率债券的价格通常：",
+    "options": [
+      "上升",
+      "下降",
+      "不变",
+      "必然归零"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "市场利率与固定收益债券价格通常反向变化。",
+    "source": {
+      "kind": "original",
+      "title": "V1 保留 · GPT 原创练习",
+      "url": "https://www.china-cba.net/Index/show/catid/70/id/43162.html",
+      "note": "来自用户提供的原始 HTML；保留题干、选项、答案与解析。下方链接为考点大纲，不是本题出处。",
+      "verifiedAt": "2026-09-20"
+    },
+    "tags": [
+      "债券"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "v1-021",
+    "subject": "finance",
+    "chapter": "基金",
+    "type": "single",
+    "question": "通过购买一篮子证券来分散单一证券风险，主要体现了投资组合的：",
+    "options": [
+      "杠杆效应",
+      "分散化作用",
+      "期限错配",
+      "刚性兑付"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "分散投资可以降低非系统性风险，但不能消除全部市场风险。",
+    "source": {
+      "kind": "original",
+      "title": "V1 保留 · GPT 原创练习",
+      "url": "https://www.china-cba.net/Index/show/catid/70/id/43162.html",
+      "note": "来自用户提供的原始 HTML；保留题干、选项、答案与解析。下方链接为考点大纲，不是本题出处。",
+      "verifiedAt": "2026-09-20"
+    },
+    "tags": [
+      "基金"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "v1-022",
+    "subject": "finance",
+    "chapter": "理财原则",
+    "type": "boolean",
+    "question": "只要某项投资历史收益率很高，就可以据此保证未来也能获得同样收益。",
+    "options": [
+      "正确",
+      "错误"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "历史业绩不能保证未来表现，投资决策还需考虑风险、期限、产品结构等。",
+    "source": {
+      "kind": "original",
+      "title": "V1 保留 · GPT 原创练习",
+      "url": "https://www.china-cba.net/Index/show/catid/70/id/43162.html",
+      "note": "来自用户提供的原始 HTML；保留题干、选项、答案与解析。下方链接为考点大纲，不是本题出处。",
+      "verifiedAt": "2026-09-20"
+    },
+    "tags": [
+      "理财原则"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "v1-023",
+    "subject": "finance",
+    "chapter": "客户分析",
+    "type": "single",
+    "question": "客户计划半年后支付一笔确定的学费，这笔资金在资产配置时最需要优先考虑：",
+    "options": [
+      "高杠杆增值",
+      "流动性与本金安全需求",
+      "长期资本增值",
+      "高波动资产集中配置"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "期限短且用途明确的刚性支出，应优先关注资金安全和到期可用性。",
+    "source": {
+      "kind": "original",
+      "title": "V1 保留 · GPT 原创练习",
+      "url": "https://www.china-cba.net/Index/show/catid/70/id/43162.html",
+      "note": "来自用户提供的原始 HTML；保留题干、选项、答案与解析。下方链接为考点大纲，不是本题出处。",
+      "verifiedAt": "2026-09-20"
+    },
+    "tags": [
+      "客户分析"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "v1-024",
+    "subject": "finance",
+    "chapter": "理财规划",
+    "type": "multiple",
+    "question": "完整的个人理财规划通常可能涉及：",
+    "options": [
+      "现金规划",
+      "保险保障规划",
+      "投资规划",
+      "退休养老规划"
+    ],
+    "answer": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explanation": "个人理财并不只是投资，还包括现金、保障、养老等多个目标维度。",
+    "source": {
+      "kind": "original",
+      "title": "V1 保留 · GPT 原创练习",
+      "url": "https://www.china-cba.net/Index/show/catid/70/id/43162.html",
+      "note": "来自用户提供的原始 HTML；保留题干、选项、答案与解析。下方链接为考点大纲，不是本题出处。",
+      "verifiedAt": "2026-09-20"
+    },
+    "tags": [
+      "理财规划"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "v1-025",
+    "subject": "finance",
+    "chapter": "现值终值",
+    "type": "single",
+    "question": "若未来一年后可获得10,500元，年折现率5%，其现值约为：",
+    "options": [
+      "10,000元",
+      "10,500元",
+      "11,025元",
+      "9,500元"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "PV=10,500÷1.05=10,000元。",
+    "source": {
+      "kind": "original",
+      "title": "V1 保留 · GPT 原创练习",
+      "url": "https://www.china-cba.net/Index/show/catid/70/id/43162.html",
+      "note": "来自用户提供的原始 HTML；保留题干、选项、答案与解析。下方链接为考点大纲，不是本题出处。",
+      "verifiedAt": "2026-09-20"
+    },
+    "tags": [
+      "现值终值"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "v1-026",
+    "subject": "finance",
+    "chapter": "保险",
+    "type": "single",
+    "question": "从家庭财务规划角度，保险最核心的功能通常是：",
+    "options": [
+      "保证获得最高投资收益",
+      "风险转移与经济补偿",
+      "替代全部储蓄",
+      "消除所有不确定性"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "保险的重要功能是通过风险转移提供经济保障，而不是保证最高投资回报。",
+    "source": {
+      "kind": "original",
+      "title": "V1 保留 · GPT 原创练习",
+      "url": "https://www.china-cba.net/Index/show/catid/70/id/43162.html",
+      "note": "来自用户提供的原始 HTML；保留题干、选项、答案与解析。下方链接为考点大纲，不是本题出处。",
+      "verifiedAt": "2026-09-20"
+    },
+    "tags": [
+      "保险"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "v1-027",
+    "subject": "finance",
+    "chapter": "流动性",
+    "type": "boolean",
+    "question": "活期存款通常比长期限、存在赎回限制的投资产品具有更高流动性。",
+    "options": [
+      "正确",
+      "错误"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "流动性强调资产转换为可支付资金的便利程度与成本，活期存款通常流动性较高。",
+    "source": {
+      "kind": "original",
+      "title": "V1 保留 · GPT 原创练习",
+      "url": "https://www.china-cba.net/Index/show/catid/70/id/43162.html",
+      "note": "来自用户提供的原始 HTML；保留题干、选项、答案与解析。下方链接为考点大纲，不是本题出处。",
+      "verifiedAt": "2026-09-20"
+    },
+    "tags": [
+      "流动性"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "v1-028",
+    "subject": "finance",
+    "chapter": "风险承受能力",
+    "type": "single",
+    "question": "下列哪项变化在其他条件相同的情况下，通常会降低客户承担投资风险的客观能力？",
+    "options": [
+      "可投资资产明显增加",
+      "稳定收入提高",
+      "近期刚性支出大幅增加",
+      "投资期限延长"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "近期刚性支出增加会压缩可承受损失空间和投资期限，通常降低风险承受能力。",
+    "source": {
+      "kind": "original",
+      "title": "V1 保留 · GPT 原创练习",
+      "url": "https://www.china-cba.net/Index/show/catid/70/id/43162.html",
+      "note": "来自用户提供的原始 HTML；保留题干、选项、答案与解析。下方链接为考点大纲，不是本题出处。",
+      "verifiedAt": "2026-09-20"
+    },
+    "tags": [
+      "风险承受能力"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "v1-029",
+    "subject": "finance",
+    "chapter": "债券",
+    "type": "multiple",
+    "question": "影响债券价格的因素可能包括：",
+    "options": [
+      "市场利率",
+      "发行人信用状况",
+      "剩余期限",
+      "票面利率"
+    ],
+    "answer": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explanation": "利率、信用、期限、票息等均会影响债券价值与市场价格。",
+    "source": {
+      "kind": "original",
+      "title": "V1 保留 · GPT 原创练习",
+      "url": "https://www.china-cba.net/Index/show/catid/70/id/43162.html",
+      "note": "来自用户提供的原始 HTML；保留题干、选项、答案与解析。下方链接为考点大纲，不是本题出处。",
+      "verifiedAt": "2026-09-20"
+    },
+    "tags": [
+      "债券"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "v1-030",
+    "subject": "finance",
+    "chapter": "复利",
+    "type": "single",
+    "question": "若名义年利率相同，在其他条件一致且利率为正时，复利计息频率提高通常会使有效年收益率：",
+    "options": [
+      "提高",
+      "降低",
+      "保持绝对不变",
+      "变为负数"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "在名义利率相同的前提下，正利率环境中更频繁复利通常提高有效年利率。",
+    "source": {
+      "kind": "original",
+      "title": "V1 保留 · GPT 原创练习",
+      "url": "https://www.china-cba.net/Index/show/catid/70/id/43162.html",
+      "note": "来自用户提供的原始 HTML；保留题干、选项、答案与解析。下方链接为考点大纲，不是本题出处。",
+      "verifiedAt": "2026-09-20"
+    },
+    "tags": [
+      "复利"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "v1-031",
+    "subject": "law",
+    "chapter": "消费者保护",
+    "type": "boolean",
+    "question": "银行向客户销售金融产品时，应当根据产品和客户情况进行充分的信息披露与风险提示。",
+    "options": [
+      "正确",
+      "错误"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "充分披露和风险提示是金融消费者权益保护与适当性管理的重要要求。",
+    "source": {
+      "kind": "original",
+      "title": "V1 保留 · GPT 原创练习",
+      "url": "https://www.china-cba.net/Index/show/catid/70/id/39302.html",
+      "note": "来自用户提供的原始 HTML；保留题干、选项、答案与解析。下方链接为考点大纲，不是本题出处。",
+      "verifiedAt": "2026-09-20"
+    },
+    "tags": [
+      "消费者保护"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "v1-032",
+    "subject": "law",
+    "chapter": "操作风险",
+    "type": "single",
+    "question": "银行员工因录入错误将转账金额多输入一个零，由此造成损失，最典型属于：",
+    "options": [
+      "市场风险",
+      "操作风险",
+      "信用风险",
+      "利率风险"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "人员、流程、系统或外部事件造成的损失通常归入操作风险范畴。",
+    "source": {
+      "kind": "original",
+      "title": "V1 保留 · GPT 原创练习",
+      "url": "https://www.china-cba.net/Index/show/catid/70/id/39302.html",
+      "note": "来自用户提供的原始 HTML；保留题干、选项、答案与解析。下方链接为考点大纲，不是本题出处。",
+      "verifiedAt": "2026-09-20"
+    },
+    "tags": [
+      "操作风险"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "v1-033",
+    "subject": "finance",
+    "chapter": "股票",
+    "type": "single",
+    "question": "与普通债券相比，普通股票投资者通常：",
+    "options": [
+      "享有固定到期还本权利",
+      "承担企业剩余风险并分享剩余收益",
+      "一定获得固定股息",
+      "风险必然更低"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "普通股代表所有权，股东承担剩余风险并可能分享企业成长收益，收益并非固定。",
+    "source": {
+      "kind": "original",
+      "title": "V1 保留 · GPT 原创练习",
+      "url": "https://www.china-cba.net/Index/show/catid/70/id/43162.html",
+      "note": "来自用户提供的原始 HTML；保留题干、选项、答案与解析。下方链接为考点大纲，不是本题出处。",
+      "verifiedAt": "2026-09-20"
+    },
+    "tags": [
+      "股票"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "v1-034",
+    "subject": "finance",
+    "chapter": "客户信息",
+    "type": "multiple",
+    "question": "了解客户财务状况时，常见的重要信息包括：",
+    "options": [
+      "收入与支出",
+      "资产与负债",
+      "家庭责任",
+      "未来财务目标"
+    ],
+    "answer": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explanation": "理财规划需要建立较完整的客户财务与目标画像。",
+    "source": {
+      "kind": "original",
+      "title": "V1 保留 · GPT 原创练习",
+      "url": "https://www.china-cba.net/Index/show/catid/70/id/43162.html",
+      "note": "来自用户提供的原始 HTML；保留题干、选项、答案与解析。下方链接为考点大纲，不是本题出处。",
+      "verifiedAt": "2026-09-20"
+    },
+    "tags": [
+      "客户信息"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "v1-035",
+    "subject": "law",
+    "chapter": "资本",
+    "type": "single",
+    "question": "银行资本的重要作用之一是：",
+    "options": [
+      "吸收非预期损失、增强风险抵御能力",
+      "保证所有贷款不发生损失",
+      "替代存款作为唯一资金来源",
+      "使银行免受监管"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "资本具有吸收损失、支持业务发展和满足监管要求等作用。",
+    "source": {
+      "kind": "original",
+      "title": "V1 保留 · GPT 原创练习",
+      "url": "https://www.china-cba.net/Index/show/catid/70/id/39302.html",
+      "note": "来自用户提供的原始 HTML；保留题干、选项、答案与解析。下方链接为考点大纲，不是本题出处。",
+      "verifiedAt": "2026-09-20"
+    },
+    "tags": [
+      "资本"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "v1-036",
+    "subject": "finance",
+    "chapter": "分散投资",
+    "type": "boolean",
+    "question": "充分分散投资可以降低非系统性风险，但通常无法消除整个市场共同波动带来的系统性风险。",
+    "options": [
+      "正确",
+      "错误"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "分散化主要降低个别资产特有风险，系统性风险不能仅靠增加证券数量完全消除。",
+    "source": {
+      "kind": "original",
+      "title": "V1 保留 · GPT 原创练习",
+      "url": "https://www.china-cba.net/Index/show/catid/70/id/43162.html",
+      "note": "来自用户提供的原始 HTML；保留题干、选项、答案与解析。下方链接为考点大纲，不是本题出处。",
+      "verifiedAt": "2026-09-20"
+    },
+    "tags": [
+      "分散投资"
+    ],
+    "difficulty": 1
+  }
+]

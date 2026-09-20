@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#193c50"><meta name="description" content="银行从业初级双科练习：来源分级、逐题解析、错题复习，进度保存在本机。">
+  <title>银行从业 · 双科练习室</title>
+  <link rel="icon" href="./icon.svg" type="image/svg+xml"><link rel="manifest" href="./manifest.webmanifest"><link rel="stylesheet" href="./styles.css">
+  <script defer src="./core.js"></script><script defer src="./data.js"></script><script defer src="./app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">跳到题目</a>
+  <header class="topbar"><a class="brand" href="./"><span class="brand-icon" aria-hidden="true">▥</span><span>银行从业<small>初级 · 双科练习室</small></span></a><span class="local-tag" id="save-status">进度仅保存在本机</span></header>
+  <div class="workspace">
+    <aside class="sidebar" aria-label="练习导航">
+      <div class="sidebar-intro"><span class="eyebrow">YOUR STUDY DESK</span><h1>把每一题，<br>真正弄懂。</h1><p>法律法规与综合能力 / 个人理财</p></div>
+      <nav class="nav"><button class="nav-item active" data-view="practice" aria-current="page"><span>▤</span> 开始刷题</button><button class="nav-item" data-view="wrong"><span>↺</span> 错题复习 <b id="nav-wrong">0</b></button><button class="nav-item" data-view="favorite"><span>☆</span> 我的收藏 <b id="nav-favorite">0</b></button><button class="nav-item" data-view="stats"><span>▥</span> 学习记录</button><button class="nav-item" data-view="library"><span>▧</span> 题库与来源</button></nav>
+      <div class="study-note"><span class="note-label">来源先行</span><p>真题 → 回忆版 → 出版物 → 开放练习 → 原创补充</p><small>每道题都保留自己的身份。<br>回忆版不等于官方公布试题。</small></div>
+    </aside>
+    <main id="main" tabindex="-1">
+      <div class="page-head"><div><span class="eyebrow" id="page-eyebrow">PRACTICE / 练习</span><h2 id="page-title">今天，从一道题开始</h2></div><button id="filter-toggle" class="quiet mobile-only" aria-expanded="false" aria-controls="filters">筛选题目</button></div>
+      <section id="practice-panel">
+        <div id="filters" class="filters">
+          <label>科目<select id="subject"><option value="all">两科混合</option><option value="law">法律法规</option><option value="finance">个人理财</option></select></label>
+          <label>章节<select id="chapter"><option value="all">全部章节</option></select></label>
+          <label>题型<select id="type"><option value="all">全部题型</option><option value="single">单选</option><option value="multiple">多选</option><option value="boolean">判断</option></select></label>
+          <label>来源<select id="source"><option value="all">全部来源</option><option value="official_past">官方真题</option><option value="recalled">真题回忆版</option><option value="publication">出版物练习</option><option value="open">开放练习</option><option value="original">GPT 原创</option></select></label>
+          <label>顺序<select id="order"><option value="priority">来源优先</option><option value="random">随机练习</option><option value="weak">薄弱优先</option></select></label>
+          <label class="check-label"><input id="unseen" type="checkbox">只练未答</label>
+        </div>
+        <div class="session-strip"><span id="queue-label">正在载入题库…</span><span id="session-score">本轮 0 / 0 正确</span></div>
+        <div class="progress-track"><div id="progress-fill"></div></div>
+        <article class="question-card" id="question-card" aria-live="polite"></article>
+        <section id="explanation" class="explanation" hidden aria-live="polite"></section>
+        <div class="answer-bar"><button id="favorite-btn" class="quiet" aria-pressed="false">☆ 收藏</button><div class="answer-actions"><button id="previous-btn" class="quiet">上一题</button><button id="submit-btn" class="primary">确认答案 <span aria-hidden="true">↵</span></button><button id="next-btn" class="primary" hidden>下一题 →</button></div></div>
+        <p class="practice-footnote">多选题需完整选对。练习结果不代表正式考试成绩。<span id="bank-version"></span></p>
+      </section>
+      <section id="stats-panel" hidden><div class="stats-grid" id="stats-grid"></div><div class="panel"><h3>章节掌握情况</h3><p class="muted">正确率按全部提交次数统计；复习答对后，题目移出当前错题本。</p><div id="chapter-stats"></div></div><div class="panel"><h3>把进度带到另一台设备</h3><p>这里没有账号同步。导出备份，再在手机或电脑导入即可。清理浏览器数据会清除本机记录。</p><div class="button-row"><button id="export-progress" class="primary">导出进度</button><label class="file-button quiet">导入进度<input type="file" id="import-progress" accept=".json,application/json"></label></div></div></section>
+      <section id="library-panel" hidden><div class="panel source-summary"><h3>先看来源，再刷题</h3><p id="bank-summary"></p><p class="muted">“来源优先”按真题、回忆版、出版物练习、开放练习、GPT 原创排序。没有收录的类别保持为零，不以原创题冒充。</p><div id="source-counts" class="source-counts"></div></div><div class="panel"><h3>真题与出版物入口</h3><p class="muted">以下是已核验的外部资料入口，不表示本站已收录其中题目。登录、付费与下载以原网站为准。</p><div id="resource-links"></div></div><div class="panel"><h3>导入自己的题库</h3><p>JSON 文件只进入当前浏览器，不会上传 GitHub。来源名称、年份和页码会随题保留；请先核对答案与现行大纲。</p><div class="button-row"><label class="file-button primary">导入题库 JSON<input type="file" id="import-bank" accept=".json,application/json"></label><button id="download-template" class="quiet">下载格式示例</button></div><p id="custom-count" class="muted"></p></div><div class="panel"><h3>手机使用</h3><p>在手机浏览器打开本站地址，即可直接刷题。可使用浏览器的“添加到主屏幕”。首次在线打开后，页面会缓存供离线使用；新版本在重新打开时更新。</p><p id="offline-status" class="muted">离线缓存尚未就绪。</p></div></section>
+      <div id="toast" class="toast" role="status" hidden></div>
+      <footer>银行从业 · 个人学习工具 <span>独立练习项目，非考试主办方</span></footer>
+    </main>
+    <aside class="right-rail"><div class="rail-heading">本机学习记录 <span>LOCAL</span></div><div class="ring" id="mastery-ring"><div><strong id="total-seen">0</strong><span>已练题目</span></div></div><div class="rail-totals"><div><b id="total-accuracy">—</b><span>累计正确率</span></div><div><b id="total-bank">0</b><span>当前题库</span></div></div><hr><h3>这次怎么练？</h3><ol class="tips"><li>先独立作答，再看解析。</li><li>不确定的题，收藏留到明天。</li><li>做错的题，换一轮再来。</li></ol><div class="rail-note">题目贵在弄懂，<br>不在刷过。</div></aside>
+  </div>
+  <noscript>本练习页需要启用 JavaScript 才能判题和保存进度。</noscript>
+</body></html>
