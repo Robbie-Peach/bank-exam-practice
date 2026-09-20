@@ -300,7 +300,7 @@ test('untrusted recalled provenance is escaped before an answer is submitted', a
 test('waiting service worker offers explicit update and reloads only after a saved-session activation', async () => {
   const events={},messages=[];let reloads=0;
   const registration={waiting:{postMessage:value=>messages.push(value)},addEventListener(){}};
-  const serviceWorker={register:async()=>registration,ready:Promise.resolve(),addEventListener:(type,fn)=>events[type]=fn};
+  const serviceWorker={controller:{},register:async()=>registration,ready:Promise.resolve(),addEventListener:(type,fn)=>events[type]=fn};
   const dom=boot({bank:recalledBank,url:'https://example.org/?source=recalled',serviceWorker,reload:()=>reloads++});
   await Promise.resolve();await Promise.resolve();
   assert.equal(dom.get('update-app').hidden,false);
@@ -314,8 +314,32 @@ test('waiting service worker offers explicit update and reloads only after a sav
 test('service worker update does not reload when current session cannot be persisted', async () => {
   let messages=0;
   const registration={waiting:{postMessage:()=>messages++},addEventListener(){}};
-  const serviceWorker={register:async()=>registration,ready:Promise.resolve(),addEventListener(){}};
+  const serviceWorker={controller:{},register:async()=>registration,ready:Promise.resolve(),addEventListener(){}};
   const dom=boot({url:'https://example.org/',serviceWorker,failWrite:true});
   await Promise.resolve();await Promise.resolve();dom.get('update-app').click();
   assert.equal(messages,0);assert.match(dom.get('toast').textContent,/导出备份/);
+});
+
+test('first service worker install never offers an update without an existing controller', async () => {
+  const events={};let reloads=0,messages=0;
+  const registration={waiting:{postMessage:()=>messages++},addEventListener(){}};
+  const serviceWorker={controller:null,register:async()=>registration,ready:Promise.resolve(),addEventListener:(type,fn)=>events[type]=fn};
+  const dom=boot({url:'https://example.org/',serviceWorker,reload:()=>reloads++});
+  await Promise.resolve();await Promise.resolve();
+  assert.equal(dom.get('update-app').hidden,true);assert.equal(dom.get('update-app').disabled,true);
+  dom.get('update-app').click();assert.equal(messages,0);
+  registration.waiting=null;serviceWorker.controller={};events.controllerchange();
+  assert.equal(dom.get('update-app').hidden,true);assert.equal(reloads,0);
+});
+
+test('an update activated by another tab removes the stale waiting-worker button', async () => {
+  const events={};let reloads=0;
+  const registration={waiting:{postMessage(){}},addEventListener(){}};
+  const serviceWorker={controller:{},register:async()=>registration,ready:Promise.resolve(),addEventListener:(type,fn)=>events[type]=fn};
+  const dom=boot({url:'https://example.org/',serviceWorker,reload:()=>reloads++});
+  await Promise.resolve();await Promise.resolve();
+  assert.equal(dom.get('update-app').hidden,false);
+  registration.waiting=null;events.controllerchange();
+  assert.equal(dom.get('update-app').hidden,true);assert.equal(dom.get('update-app').disabled,true);
+  assert.equal(reloads,0);
 });

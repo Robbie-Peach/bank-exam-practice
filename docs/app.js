@@ -137,13 +137,13 @@
   }
   try { bind();load(); } catch(e) { $('question-card').textContent='题库载入失败：'+e.message+'。请刷新页面；若仍出现，请保留进度备份后联系维护者。';console.error(e); }
   if('serviceWorker' in navigator && /^https?:$/.test(location.protocol)){
-    let updateRequested=false;
-    navigator.serviceWorker.addEventListener('controllerchange',()=>{if(updateRequested)location.reload();});
+    let updateRequested=false, offerUpdate=()=>{};
+    navigator.serviceWorker.addEventListener('controllerchange',()=>{if(updateRequested)location.reload();else offerUpdate();});
     navigator.serviceWorker.register('./sw.js').then(async reg=>{
-      const offerUpdate=()=>{if(reg.waiting){$('update-app').hidden=false;$('update-app').disabled=false;}};
-      $('update-app').onclick=()=>{if(!reg.waiting)return;if(!saveSession()){notice('更新前请先到学习记录导出备份，本机存储未成功。');return;}updateRequested=true;$('update-app').disabled=true;$('update-app').textContent='正在更新…';reg.waiting.postMessage({type:'SKIP_WAITING'});};
+      offerUpdate=()=>{const available=!!(reg.waiting&&navigator.serviceWorker.controller);$('update-app').hidden=!available;$('update-app').disabled=!available||updateRequested;};
+      $('update-app').onclick=()=>{offerUpdate();if(!reg.waiting||!navigator.serviceWorker.controller)return;if(!saveSession()){notice('更新前请先到学习记录导出备份，本机存储未成功。');return;}updateRequested=true;$('update-app').disabled=true;$('update-app').textContent='正在更新…';reg.waiting.postMessage({type:'SKIP_WAITING'});};
       offerUpdate();
-      reg.addEventListener('updatefound',()=>{const worker=reg.installing;if(worker)worker.addEventListener('statechange',()=>{if(worker.state==='installed')offerUpdate();});});
+      reg.addEventListener('updatefound',()=>{const worker=reg.installing;if(worker)worker.addEventListener('statechange',offerUpdate);});
       await navigator.serviceWorker.ready;$('offline-status').textContent='离线缓存已就绪。外部资料入口仍需联网。';offerUpdate();
     }).catch(()=>{$('offline-status').textContent='离线缓存未成功；请保持联网使用。';});
   }else $('offline-status').textContent='直接打开本地文件时不启用离线缓存；完整文件夹本身可离线使用。';

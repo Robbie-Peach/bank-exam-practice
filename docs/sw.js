@@ -1,5 +1,5 @@
 /* Static assets only; user progress is never cached or uploaded. */
-const CACHE='bank-quiz-e0fcefeb282f';
+const CACHE='bank-quiz-24511b427633';
 const FILES=["./","./index.html","./styles.css","./core.js","./app.js","./data.js","./icon.svg","./manifest.webmanifest","./ATTRIBUTION.html"];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES))));
 self.addEventListener('message',e=>{if(e.data&&e.data.type==='SKIP_WAITING')self.skipWaiting();});
