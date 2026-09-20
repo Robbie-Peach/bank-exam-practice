@@ -45,3 +45,12 @@ test('historical context, original option text and caches are not silently relab
   assert.match(attribution,/目前共 156 道/);assert.match(attribution,/回忆版 5/);
   assert.doesNotMatch(attribution,/官方真题、回忆版、出版物练习题直接收录量均为 0/);
 });
+test('service worker installation bypasses stale HTTP asset caches instead of recaching old questions',async()=>{
+  const handlers={},requests=[];let completed;
+  class AssetRequest {constructor(url,options){this.url=url;this.cache=options.cache;}}
+  const sandbox={Request:AssetRequest,self:{addEventListener:(name,fn)=>handlers[name]=fn},caches:{open:async()=>({addAll:async rows=>requests.push(...rows)})}};
+  vm.runInNewContext(fs.readFileSync(path.join(root,'sw.js'),'utf8'),sandbox);
+  handlers.install({waitUntil:p=>completed=p});await completed;
+  assert.equal(requests.length,9);assert(requests.some(r=>r.url==='./data.js'));
+  for(const r of requests)assert.equal(r.cache,'reload');
+});
