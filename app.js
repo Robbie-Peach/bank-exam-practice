@@ -14,7 +14,7 @@
   function read(key) { try { return JSON.parse(localStorage.getItem(key) || 'null'); } catch { storageOK=false; return null; } }
   function write(key, value) { try { localStorage.setItem(key, JSON.stringify(value)); return true; } catch { storageOK=false; $('save-status').textContent='保存失败，请导出进度'; notice('本机存储未成功，请到学习记录导出备份。'); return false; } }
   function save() { const ok=write(KEY, {version:1,records}); updateStats(); return ok; }
-  function saveSession() { write(SESSION, {view,queueView,idx,ids:queue.map(q=>q.id),results,drafts,filters:Object.fromEntries(['subject','chapter','type','source','order'].map(id=>[id,$(id).value])),unseen:$('unseen').checked}); }
+  function saveSession() { return write(SESSION, {bankVersion:window.BANK_DATA.version,view,queueView,idx,ids:queue.map(q=>q.id),results,drafts,filters:Object.fromEntries(['subject','chapter','type','source','order'].map(id=>[id,$(id).value])),unseen:$('unseen').checked}); }
   function combine(extra) { return C.validateQuestions([...(window.BANK_DATA.questions||[]),...extra]); }
   function validateCustom(raw) { return Array.isArray(raw) && raw.length===0 ? [] : C.validateQuestions(raw); }
   function link(url, label) { const safe=C.safeSourceUrl(url); return safe ? `<a href="${escape(safe)}" target="_blank" rel="noopener noreferrer">${escape(label)} ↗</a>` : ''; }
@@ -24,7 +24,7 @@
     try { records=C.validateBackup(read(KEY)||{version:1,records:{}},questions).records; } catch { records={}; notice('进度记录格式异常；原存储未删除，请先导出保留。'); }
     if(!storageOK) $('save-status').textContent='存储不可用，请使用导出备份';
     fillChapters(); renderLibrary(); updateStats();
-    const session=read(SESSION);
+    const session=read(SESSION), requestedRecalled=new URL(location.href).searchParams.get('source')==='recalled';
     if (session && session.filters && Array.isArray(session.ids)) {
       for(const id of ['subject','type','source','order']) if([...$(id).options].some(o=>o.value===session.filters[id])) $(id).value=session.filters[id];
       fillChapters(); if([...$('chapter').options].some(o=>o.value===session.filters.chapter)) $('chapter').value=session.filters.chapter;
@@ -32,15 +32,20 @@
       view=['practice','wrong','favorite','stats','library'].includes(session.view)?session.view:'practice';
       const qmap=new Map(questions.map(q=>[q.id,q]));
       queueView=['practice','wrong','favorite'].includes(session.queueView)?session.queueView:(['practice','wrong','favorite'].includes(view)?view:'practice');
-      queue=[...new Set(session.ids)].filter(id=>qmap.has(id)).map(id=>qmap.get(id));
-      idx=Number.isInteger(session.idx)?Math.max(0,Math.min(session.idx,queue.length-1)):0;
+      const upgraded=session.bankVersion!==window.BANK_DATA.version;
+      const switchToRecalled=requestedRecalled && ($('source').value!=='recalled'||queueView!=='practice');
+      if(switchToRecalled) { recalledFilters(); view='practice';queueView='practice'; }
+      else if(requestedRecalled) view='practice';
+      queue=upgraded||switchToRecalled?C.buildQueue(questions,filterOptions(queueView),records):[...new Set(session.ids)].filter(id=>qmap.has(id)).map(id=>qmap.get(id));
+      idx=upgraded||switchToRecalled?0:Number.isInteger(session.idx)?Math.max(0,Math.min(session.idx,queue.length-1)):0;
       if(session.results && typeof session.results==='object') for(const q of queue) {
         const r=session.results[q.id];
         if(r && Array.isArray(r.selected) && r.selected.length && new Set(r.selected).size===r.selected.length && r.selected.every(i=>Number.isInteger(i)&&i>=0&&i<q.options.length)) results[q.id]={selected:r.selected,correct:C.checkAnswer(q,r.selected)};
       }
       if(session.drafts&&typeof session.drafts==='object')for(const q of queue){const a=session.drafts[q.id];if(Array.isArray(a)&&a.length<=q.options.length&&new Set(a).size===a.length&&a.every(i=>Number.isInteger(i)&&i>=0&&i<q.options.length)&&(q.type==='multiple'||a.length<=1))drafts[q.id]=a;}
-      setView(view,false); if(!queue.length) restart(); else render();
-    } else { setView('practice'); }
+      setView(view,false); if(!queue.length) restart(); else { render();saveSession(); }
+      if(upgraded&&storageOK) notice('题库已更新，本轮题目已刷新；历史作答、草稿与收藏已保留。');
+    } else { if(requestedRecalled) recalledFilters();setView('practice'); }
     $('bank-version').textContent=`题库 ${window.BANK_DATA.version} · ${questions.length} 题`;
   }
   function fillChapters() {
@@ -49,7 +54,8 @@
     $('chapter').innerHTML='<option value="all">全部章节</option>'+chapters.map(s=>`<option value="${escape(s)}">${escape(s)}</option>`).join('');
     if(chapters.includes(previous)) $('chapter').value=previous;
   }
-  function filterOptions(){return {subject:$('subject').value,chapter:$('chapter').value,type:$('type').value,source:$('source').value,order:$('order').value,mode:view==='wrong'?'wrong':view==='favorite'?'favorite':$('unseen').checked?'unseen':'all',limit:0};}
+  function recalledFilters(){for(const id of ['subject','chapter','type'])$(id).value='all';$('source').value='recalled';$('order').value='priority';$('unseen').checked=false;fillChapters();}
+  function filterOptions(modeView=view){return {subject:$('subject').value,chapter:$('chapter').value,type:$('type').value,source:$('source').value,order:$('order').value,mode:modeView==='wrong'?'wrong':modeView==='favorite'?'favorite':$('unseen').checked?'unseen':'all',limit:0};}
   function restart(){queueView=['practice','wrong','favorite'].includes(view)?view:'practice';queue=C.buildQueue(questions,filterOptions(),records);idx=0;selected=[];results={};drafts={};render();saveSession();}
   function setView(next,reset=true){
     const previousView=view; view=next;
@@ -78,7 +84,8 @@
       $('clear-filter').onclick=()=>{for(const id of ['subject','chapter','type','source'])$(id).value='all';$('unseen').checked=false;fillChapters();setView('practice');};
       $('favorite-btn').textContent='☆ 收藏';return;
     }
-    $('question-card').innerHTML=`<div class="question-meta"><span class="badge">${typeNames[q.type]}</span><span>${escape(subjects[q.subject])} / ${escape(q.chapter)}</span><span class="badge source">${kindNames[q.source.kind]}</span><span class="question-number">${String(idx+1).padStart(3,'0')}</span></div><h3 class="question-title">${escape(displayText(q.question))}</h3><p class="question-tip">${q.type==='multiple'?'选择所有正确选项，全部选对才计为正确。':'请选择一个答案。'}</p><div class="options" role="group" aria-label="答案选项">${q.options.map((o,i)=>`<button class="option" data-option="${i}" aria-pressed="false"><span class="option-letter">${String.fromCharCode(65+i)}</span><span>${escape(displayText(o))}</span><span class="option-mark"></span></button>`).join('')}</div>`;
+    const provenance=q.source.kind==='recalled'?`<div class="question-source"><b>${escape(q.source.title)}</b><span>${[q.source.year,q.source.location].filter(Boolean).map(escape).join(' · ')}</span><small>回忆整理，非官方公布试题。</small>${link(q.source.url,'核对回忆版原文')}</div>`:'';
+    $('question-card').innerHTML=`<div class="question-meta"><span class="badge">${typeNames[q.type]}</span><span>${escape(subjects[q.subject])} / ${escape(q.chapter)}</span><span class="badge source">${kindNames[q.source.kind]}</span><span class="question-number">${String(idx+1).padStart(3,'0')}</span></div>${provenance}<h3 class="question-title">${escape(displayText(q.question))}</h3><p class="question-tip">${q.type==='multiple'?'选择所有正确选项，全部选对才计为正确。':'请选择一个答案。'}</p><div class="options" role="group" aria-label="答案选项">${q.options.map((o,i)=>`<button class="option" data-option="${i}" aria-pressed="false"><span class="option-letter">${String.fromCharCode(65+i)}</span><span>${escape(displayText(o))}</span><span class="option-mark"></span></button>`).join('')}</div>`;
     document.querySelectorAll('[data-option]').forEach(btn=>btn.onclick=()=>pick(Number(btn.dataset.option)));
     updateFavorite(q); updateOptions(); if(results[q.id]) showResult(q,results[q.id]);
   }
@@ -105,6 +112,8 @@
   }
   function renderLibrary(){
     const counts=Object.fromEntries(Object.keys(kindNames).map(k=>[k,questions.filter(q=>q.source.kind===k).length]));
+    $('recalled-shortcut').textContent=`回忆版专项 · ${counts.recalled} 题 →`;
+    $('recalled-shortcut').disabled=counts.recalled===0;
     $('bank-summary').textContent=`当前可练 ${questions.length} 题。内置 ${window.BANK_DATA.questions.length} 题，本机导入 ${custom.length} 题。`;
     $('source-counts').innerHTML=Object.entries(counts).map(([k,n])=>`<span>${kindNames[k]} <b>${n}</b></span>`).join('');
     const labels={recalled_past:'真题回忆版',official_textbook:'官方教材',publication:'出版物',official_outline:'官方大纲',open_benchmark:'开放题库'};
@@ -115,6 +124,7 @@
   async function readFile(input){const file=input.files[0];if(!file)return null;if(file.size>8*1024*1024)throw Error('文件超过 8 MB，请拆分后导入。');return JSON.parse(await file.text());}
   function bind(){
     document.querySelectorAll('[data-view]').forEach(btn=>btn.onclick=()=>setView(btn.dataset.view));
+    $('recalled-shortcut').onclick=()=>{recalledFilters();setView('practice',false);restart();notice('已进入回忆版专项。每题可查看考次与原文来源。');};
     for(const id of ['subject','chapter','type','source','order','unseen']) $(id).onchange=()=>{if(id==='subject')fillChapters();restart();};
     $('filter-toggle').onclick=()=>{const open=$('filters').classList.toggle('open');$('filter-toggle').setAttribute('aria-expanded',String(open));};
     $('submit-btn').onclick=submit;$('next-btn').onclick=next;$('previous-btn').onclick=()=>{if(idx>0){idx--;render();saveSession();}};
@@ -127,6 +137,14 @@
   }
   try { bind();load(); } catch(e) { $('question-card').textContent='题库载入失败：'+e.message+'。请刷新页面；若仍出现，请保留进度备份后联系维护者。';console.error(e); }
   if('serviceWorker' in navigator && /^https?:$/.test(location.protocol)){
-    navigator.serviceWorker.register('./sw.js').then(async reg=>{await navigator.serviceWorker.ready;$('offline-status').textContent='离线缓存已就绪。外部资料入口仍需联网。';if(reg.waiting)notice('新版本已下载，关闭本站所有标签页后重新打开即可更新。');}).catch(()=>{$('offline-status').textContent='离线缓存未成功；请保持联网使用。';});
+    let updateRequested=false;
+    navigator.serviceWorker.addEventListener('controllerchange',()=>{if(updateRequested)location.reload();});
+    navigator.serviceWorker.register('./sw.js').then(async reg=>{
+      const offerUpdate=()=>{if(reg.waiting){$('update-app').hidden=false;$('update-app').disabled=false;}};
+      $('update-app').onclick=()=>{if(!reg.waiting)return;if(!saveSession()){notice('更新前请先到学习记录导出备份，本机存储未成功。');return;}updateRequested=true;$('update-app').disabled=true;$('update-app').textContent='正在更新…';reg.waiting.postMessage({type:'SKIP_WAITING'});};
+      offerUpdate();
+      reg.addEventListener('updatefound',()=>{const worker=reg.installing;if(worker)worker.addEventListener('statechange',()=>{if(worker.state==='installed')offerUpdate();});});
+      await navigator.serviceWorker.ready;$('offline-status').textContent='离线缓存已就绪。外部资料入口仍需联网。';offerUpdate();
+    }).catch(()=>{$('offline-status').textContent='离线缓存未成功；请保持联网使用。';});
   }else $('offline-status').textContent='直接打开本地文件时不启用离线缓存；完整文件夹本身可离线使用。';
 })();

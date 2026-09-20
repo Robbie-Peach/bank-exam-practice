@@ -35,7 +35,9 @@
       "title": "法律法规｜2026年6月13日考后答案文章",
       "url": "https://www.233.com/ccbp/zhenti/ggjc/202606/04090728337898.html",
       "provider": "233网校",
-      "distribution": "link_only"
+      "distribution": "selected_short_excerpt",
+      "embeddedCount": 1,
+      "note": "本站已收录本文 1 道短题；其余题目在原站查看。机构回忆整理，非官方试卷，解析为本站新增。"
     },
     {
       "id": "article-wealth-233",
@@ -136,6 +138,54 @@
       },
       "distribution": "reviewed_subset",
       "note": "收录15道逐题审校练习，非官方真题、非已认证出版物题。数据及新增解释遵循CC-BY-NC-SA 4.0，保留署名与同许可非商业使用。"
+    },
+    {
+      "id": "recall-youlu-202410-law-03",
+      "kind": "recalled_past",
+      "priority": 1,
+      "subject": "law",
+      "title": "优路教育 · 2024年10月法律法规回忆题",
+      "url": "https://www.youlu.com/yhcy/article/CA20241026010000000071",
+      "provider": "优路教育",
+      "distribution": "selected_short_excerpt",
+      "embeddedCount": 1,
+      "note": "本站已收录本文 1 道短题；其余题目在原站查看。机构回忆整理，非官方试卷，解析为本站新增。"
+    },
+    {
+      "id": "recall-233-202306-finance-01",
+      "kind": "recalled_past",
+      "priority": 1,
+      "subject": "finance",
+      "title": "233网校 · 2023年6月个人理财回忆题",
+      "url": "https://www.233.com/ccbp/zhenti/grlc/202305/2514274564564.html",
+      "provider": "233网校",
+      "distribution": "selected_short_excerpt",
+      "embeddedCount": 1,
+      "note": "本站已收录本文 1 道短题；其余题目在原站查看。机构回忆整理，非官方试卷，解析为本站新增。"
+    },
+    {
+      "id": "recall-educity-202211-finance-03",
+      "kind": "recalled_past",
+      "priority": 1,
+      "subject": "finance",
+      "title": "希赛网 · 2022年11月个人理财回忆题",
+      "url": "https://www.educity.cn/ccbp/2421112.html",
+      "provider": "希赛网",
+      "distribution": "selected_short_excerpt",
+      "embeddedCount": 1,
+      "note": "本站已收录本文 1 道短题；其余题目在原站查看。机构回忆整理，非官方试卷，解析为本站新增。"
+    },
+    {
+      "id": "recall-233-202110-finance-09",
+      "kind": "recalled_past",
+      "priority": 1,
+      "subject": "finance",
+      "title": "233网校 · 2021年10月个人理财回忆题",
+      "url": "https://www.233.com/ccbp/zhenti/grlc/202110/16150249875109.html",
+      "provider": "233网校",
+      "distribution": "selected_short_excerpt",
+      "embeddedCount": 1,
+      "note": "本站已收录本文 1 道短题；其余题目在原站查看。机构回忆整理，非官方试卷，解析为本站新增。"
     }
   ]
 }

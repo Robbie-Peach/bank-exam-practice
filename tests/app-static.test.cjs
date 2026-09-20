@@ -28,8 +28,10 @@ const questions = [
 ];
 function boot(options = {}) {
   const dom = createDom(html, options);
+  if(options.url) dom.context.location = { href:options.url, protocol:new URL(options.url).protocol, reload:options.reload || (()=>{}) };
+  if(options.serviceWorker) dom.context.navigator.serviceWorker=options.serviceWorker;
   dom.run(core);
-  dom.run('window.BANK_DATA = ' + JSON.stringify({ version: 'test', questions, resources: [] }));
+  dom.run('window.BANK_DATA = ' + JSON.stringify(options.bank || { version: 'test', questions, resources: [] }));
   dom.run(app);
   assert.equal(dom.errors.length, 0, dom.errors.map(e => e.stack || String(e)).join('\n'));
   assert.doesNotMatch(dom.get('question-card').textContent, /题库载入失败/);
@@ -206,13 +208,114 @@ test('the local attribution page is actually linked instead of rejected by exter
 });
 
 test('session restoration recomputes answer correctness and discards out-of-range selection', () => {
-  const storage = new Map([[SESSION, JSON.stringify({ view: 'practice', idx: 0, ids: ['single', 'single', 'unknown'], results: { single: { selected: [99], correct: true } }, filters: {} })]]);
+  const storage = new Map([[SESSION, JSON.stringify({ bankVersion:'test', view: 'practice', idx: 0, ids: ['single', 'single', 'unknown'], results: { single: { selected: [99], correct: true } }, filters: {} })]]);
   const dom = boot({ storage });
   assert.equal(dom.get('explanation').hidden, true);
   assert.match(dom.get('queue-label').textContent, /第 1 \/ 1 题/);
   assert.deepEqual(records(dom), {});
-  const validButWrong = new Map([[SESSION, JSON.stringify({ view: 'practice', ids: ['single'], idx: 0, results: { single: { selected: [0], correct: true } }, filters: {} })]]);
+  const validButWrong = new Map([[SESSION, JSON.stringify({ bankVersion:'test', view: 'practice', ids: ['single'], idx: 0, results: { single: { selected: [0], correct: true } }, filters: {} })]]);
   const refreshed = boot({ storage: validButWrong });
   assert.match(refreshed.get('explanation').innerHTML, /记住这个知识点/);
   assert.deepEqual(records(refreshed), {});
+});
+
+const recalled = id => question(id, {
+  source:{kind:'recalled',title:'公开发布方 · 回忆试题',url:'https://example.org/recalled',note:'回忆整理，非官方试卷',verifiedAt:'2026-09-20',year:'2024',location:'2024 年 10 月 · 文章第 3 题'}
+});
+const recalledBank = {version:'test-r2',questions:[...questions,recalled('recall-a'),recalled('recall-b')],resources:[]};
+
+test('recalled shortcut uses live count and clears incompatible filters without losing history', () => {
+  const empty = boot(); assert.equal(empty.get('recalled-shortcut').disabled,true);
+  assert.match(empty.get('recalled-shortcut').textContent,/0 题/);
+  const dom = boot({bank:recalledBank});
+  dom.pick(1);dom.get('submit-btn').click();dom.get('favorite-btn').click();
+  dom.get('subject').value='finance';dom.get('type').value='multiple';dom.get('unseen').checked=true;
+  dom.get('recalled-shortcut').click();
+  assert.match(dom.get('recalled-shortcut').textContent,/2 题/);
+  assert.match(dom.get('queue-label').textContent,/第 1 \/ 2 题/);
+  assert.equal(dom.get('source').value,'recalled');assert.equal(dom.get('subject').value,'all');
+  assert.equal(dom.get('type').value,'all');assert.equal(dom.get('unseen').checked,false);
+  assert.deepEqual(records(dom)['recall-a'],counts(1,1,true,true));
+  assert.equal(dom.get('explanation').hidden,true);
+  assert.match(dom.get('question-card').innerHTML,/公开发布方/);
+  assert.match(dom.get('question-card').innerHTML,/文章第 3 题/);
+  assert.match(dom.get('question-card').innerHTML,/非官方公布试题/);
+  assert.match(dom.get('question-card').innerHTML,/href="https:\/\/example.org\/recalled"/);
+});
+
+test('recalled deep link is a real filtered session and reload retains position and draft', () => {
+  const url='https://example.org/bank/?source=recalled';
+  const dom=boot({bank:recalledBank,url});
+  assert.match(dom.get('queue-label').textContent,/第 1 \/ 2 题/);
+  dom.pick(1);dom.get('submit-btn').click();dom.get('next-btn').click();dom.pick(0);
+  const refreshed=boot({bank:recalledBank,url,storage:dom.storage});
+  assert.match(refreshed.get('queue-label').textContent,/第 2 \/ 2 题/);
+  assert.equal(refreshed.document.querySelectorAll('[data-option]')[0].classList.contains('selected'),true);
+  assert.equal(records(refreshed)['recall-b'],undefined);
+  assert.deepEqual(records(refreshed)['recall-a'],counts(1,1,true));
+  assert.equal(JSON.parse(refreshed.storage.get(SESSION)).bankVersion,'test-r2');
+});
+
+test('deep link switches an existing original-only session to recalled practice, preserving records', () => {
+  const dom=boot({bank:recalledBank});
+  dom.get('source').value='original';dom.get('source').onchange();
+  dom.pick(1);dom.get('submit-btn').click();dom.navigate('stats');
+  const refreshed=boot({bank:recalledBank,url:'https://example.org/?source=recalled',storage:dom.storage});
+  assert.equal(refreshed.get('practice-panel').hidden,false);
+  assert.equal(refreshed.get('source').value,'recalled');
+  assert.match(refreshed.get('queue-label').textContent,/第 1 \/ 2 题/);
+  assert.deepEqual(records(refreshed).single,counts(1,1,true));
+});
+
+test('a bank version upgrade incorporates newly added priority questions without erasing records or drafts', () => {
+  for(const legacy of [false,true]) {
+    const old=boot();old.get('favorite-btn').click();old.pick(1);old.get('submit-btn').click();old.get('next-btn').click();old.pick(0);
+    if(legacy){const saved=JSON.parse(old.storage.get(SESSION));delete saved.bankVersion;old.storage.set(SESSION,JSON.stringify(saved));}
+    const upgraded=boot({bank:recalledBank,storage:old.storage});
+    assert.match(upgraded.get('queue-label').textContent,/第 1 \/ 5 题/);
+    assert.match(upgraded.get('question-card').innerHTML,/回归测试题 recall-a/);
+    assert.match(upgraded.get('toast').textContent,/题库已更新/);
+    assert.deepEqual(records(upgraded).single,counts(1,1,true,true));
+    const session=JSON.parse(upgraded.storage.get(SESSION));
+    assert.equal(session.bankVersion,'test-r2');assert.deepEqual(session.drafts.multiple,[0]);
+    assert.deepEqual(session.results.single,{selected:[1],correct:true});
+    const refreshed=boot({bank:recalledBank,storage:upgraded.storage});
+    assert.doesNotMatch(refreshed.get('toast').textContent,/题库已更新/);
+  }
+});
+
+test('untrusted recalled provenance is escaped before an answer is submitted', async () => {
+  const dom=boot(), q=recalled('xss-recalled');
+  q.source.title='<img src=x onerror=alert(1)>';
+  q.source.year='<svg onload=alert(1)>';
+  q.source.location='<script>alert(1)</script>';
+  await dom.importFile('import-bank',[q]);
+  assert.match(dom.get('question-card').innerHTML,/&lt;img/);
+  assert.match(dom.get('question-card').innerHTML,/&lt;svg/);
+  assert.match(dom.get('question-card').innerHTML,/&lt;script/);
+  assert.doesNotMatch(dom.get('question-card').innerHTML,/<(?:img|svg|script)\b/);
+  assert.equal(dom.get('explanation').hidden,true);
+});
+
+test('waiting service worker offers explicit update and reloads only after a saved-session activation', async () => {
+  const events={},messages=[];let reloads=0;
+  const registration={waiting:{postMessage:value=>messages.push(value)},addEventListener(){}};
+  const serviceWorker={register:async()=>registration,ready:Promise.resolve(),addEventListener:(type,fn)=>events[type]=fn};
+  const dom=boot({bank:recalledBank,url:'https://example.org/?source=recalled',serviceWorker,reload:()=>reloads++});
+  await Promise.resolve();await Promise.resolve();
+  assert.equal(dom.get('update-app').hidden,false);
+  events.controllerchange();assert.equal(reloads,0);
+  dom.pick(1);dom.get('update-app').click();
+  assert.equal(messages.length,1);assert.equal(messages[0].type,'SKIP_WAITING');
+  assert.deepEqual(JSON.parse(dom.storage.get(SESSION)).drafts['recall-a'],[1]);
+  events.controllerchange();assert.equal(reloads,1);
+});
+
+test('service worker update does not reload when current session cannot be persisted', async () => {
+  let messages=0;
+  const registration={waiting:{postMessage:()=>messages++},addEventListener(){}};
+  const serviceWorker={register:async()=>registration,ready:Promise.resolve(),addEventListener(){}};
+  const dom=boot({url:'https://example.org/',serviceWorker,failWrite:true});
+  await Promise.resolve();await Promise.resolve();dom.get('update-app').click();
+  assert.equal(messages,0);assert.match(dom.get('toast').textContent,/导出备份/);
 });
