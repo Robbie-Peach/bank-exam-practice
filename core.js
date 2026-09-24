@@ -222,7 +222,7 @@
     var options = Object.assign({ subject: 'all', chapter: 'all', type: 'all', source: 'all', mode: 'all', order: 'priority', limit: 0 }, config || {});
     member(options.subject, ['all'].concat(SUBJECTS), '筛选科目');
     member(options.type, ['all'].concat(TYPES), '筛选题型');
-    member(options.source, ['all'].concat(SOURCES), '筛选来源');
+    member(options.source, ['all', 'notes_original'].concat(SOURCES), '筛选来源');
     member(options.mode, ['all', 'wrong', 'favorite', 'unseen'], '练习模式');
     member(options.order, ['priority', 'random', 'weak'], '出题顺序');
     string(options.chapter, '筛选章节', 100, false);
@@ -233,7 +233,9 @@
       return (options.subject === 'all' || question.subject === options.subject) &&
         (options.chapter === 'all' || question.chapter === options.chapter) &&
         (options.type === 'all' || question.type === options.type) &&
-        (options.source === 'all' || question.source.kind === options.source) &&
+        (options.source === 'all' || (options.source === 'notes_original'
+          ? question.source.kind === 'original' && question.tags.includes('笔记原创')
+          : question.source.kind === options.source)) &&
         (options.mode !== 'wrong' || r.lastCorrect === false) &&
         (options.mode !== 'favorite' || r.favorite) &&
         (options.mode !== 'unseen' || r.attempts === 0);

@@ -6,22 +6,25 @@
 - 发布目录：`docs/`，GitHub Pages 从 `codex/bank-quiz-pages` 分支的 `/docs` 发布。
 - 在线页面提供来源筛选、章节/题型筛选、随机与薄弱优先、错题本、收藏、逐题解析、统计、进度备份、JSON 题库本机导入。
 - localStorage 仅本机保存；不自动跨设备同步。可用导出/导入在手机和电脑之间迁移。
-- 首次在线加载完成后可离线。看到更新按钮时点击即可切换新缓存并保留进度；从旧版首次升级若仍显示 151 题，关闭所有本站旧标签页再打开。
+- 首次在线加载完成后可离线。看到更新按钮时点击即可切换新缓存并保留进度；若仍显示旧题量，关闭所有本站旧标签页再打开。
+- 刷题页「来源」可选 **笔记知识点原创**，单独练习新增的两科课程笔记题；该选项是 GPT 原创的子集。
 - 回忆版直达：`https://robbie-peach.github.io/bank-exam-practice/?source=recalled`；也可点「回忆版专项」。旧题库升级会刷新本轮队列，保留历史作答与收藏。
 - 也可以完整下载 `docs` 目录，直接打开 `index.html`。不要仅复制 HTML 而漏掉脚本和样式。
 
 ## 数据来源
-初始 36 道 GPT 原创 + 新增 100 道 GPT 原创 + 15 道逐题审校的 FinEval 开放评测练习 + 5 道外部回忆版短题 = 156 道。
+初始 36 道 GPT 原创 + 新增 100 道 GPT 原创 + 2025 课程笔记知识点原创 110 道（法律法规 60、个人理财 50）+ 15 道逐题审校的 FinEval 开放评测练习 + 5 道外部回忆版短题 = **266 道**。
 
 真题 > 回忆版 > 出版物 > 开放练习 > 原创。回忆版已直接收录 5 道（法律法规 2、个人理财 3）；官方原卷/出版物站内直接收录为 0，外部整套题数不计入本站。回忆版保留机构题源和考次，不冒充官方原卷，详见 `research/recalled-review.md`。FinEval 不是已认证真题或出版物题目；说明见 `data/ATTRIBUTION.md` 与在线 `ATTRIBUTION.html`。
 
 保留来源链接、核验日期、答案依据。未来收录须核验真实性、时效和公开使用条件。个人 JSON 导入只存本机，不会上传服务器。
 
+已检查本机两科课程目录：现有资料为笔记/思维导图/讲义，并无独立的题库导出文件；购买课程不等于本站已取得课程题库正文。新增 110 题为按笔记知识点独立拟写的练习，不复刻课程原题，逐题注明笔记 PDF 物理页码。课程 PDF 未上传。来源版本与接入过程见 `research/course-notes-audit.md`。
+
 ## 开发与验证
 Node.js 无第三方依赖：
 ```sh
 node scripts/build.cjs
-node --test tests/core.test.cjs tests/app-static.test.cjs tests/recalled.test.cjs
+node --test tests/core.test.cjs tests/app-static.test.cjs tests/recalled.test.cjs tests/notes-bank.test.cjs
 python -m http.server 4173 --bind 127.0.0.1 --directory docs
 ```
 原 HTML 仅保存在本地 `baseline/`，没有上传 GitHub；代码与发布文件无需原 HTML 即可构建。`scripts/import-v1.cjs` 是一次性源题导入脚本。

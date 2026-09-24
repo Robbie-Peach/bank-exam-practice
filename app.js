@@ -114,8 +114,9 @@
     const counts=Object.fromEntries(Object.keys(kindNames).map(k=>[k,questions.filter(q=>q.source.kind===k).length]));
     $('recalled-shortcut').textContent=`回忆版专项 · ${counts.recalled} 题 →`;
     $('recalled-shortcut').disabled=counts.recalled===0;
-    $('bank-summary').textContent=`当前可练 ${questions.length} 题。内置 ${window.BANK_DATA.questions.length} 题，本机导入 ${custom.length} 题。`;
-    $('source-counts').innerHTML=Object.entries(counts).map(([k,n])=>`<span>${kindNames[k]} <b>${n}</b></span>`).join('');
+    const notesCount=questions.filter(q=>q.source.kind==='original'&&q.tags.includes('笔记原创')).length;
+    $('bank-summary').textContent=`当前可练 ${questions.length} 题。内置 ${window.BANK_DATA.questions.length} 题，本机导入 ${custom.length} 题；其中笔记知识点原创 ${notesCount} 题。`;
+    $('source-counts').innerHTML=Object.entries(counts).map(([k,n])=>`<span>${kindNames[k]} <b>${n}</b></span>`).join('')+`<span>笔记知识点原创 <b>${notesCount}</b></span>`;
     const labels={recalled_past:'真题回忆版',official_textbook:'官方教材',publication:'出版物',official_outline:'官方大纲',open_benchmark:'开放题库'};
     $('resource-links').innerHTML=(window.BANK_DATA.resources||[]).map(r=>`<article class="resource"><span class="resource-type">${escape(r.category||labels[r.kind]||'资料')}</span>${link(r.url,r.title)}<p>${escape(r.note||r.description||'')}</p></article>`).join('')+`<article class="resource"><a href="./ATTRIBUTION.html" target="_blank" rel="noopener">题库来源、审校与许可说明 ↗</a></article>`;
     $('custom-count').textContent=`本机已导入 ${custom.length} 题。重复 ID 或完全相同题干将拒绝导入，原题库不变。`;

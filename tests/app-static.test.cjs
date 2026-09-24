@@ -47,6 +47,20 @@ test('first visit with no custom questions does not announce corrupt local data'
   assert.equal(dom.get('total-bank').textContent, 3);
 });
 
+test('notes-original source filter is usable on mobile and survives reload', () => {
+  const note = question('note-only', { subject: 'finance', tags: ['笔记原创', '复利'] });
+  const bank = { version: 'notes-test', questions: [...questions, note], resources: [] };
+  const dom = boot({ bank });
+  dom.get('source').value = 'notes_original'; dom.get('source').onchange();
+  assert.match(dom.get('queue-label').textContent, /第 1 \/ 1 题/);
+  assert.match(dom.get('question-card').innerHTML, /note-only/);
+  dom.navigate('library');
+  assert.match(dom.get('bank-summary').textContent, /笔记知识点原创 1 题/);
+  const refreshed = boot({ bank, storage: dom.storage });
+  assert.equal(refreshed.get('source').value, 'notes_original');
+  assert.match(refreshed.get('queue-label').textContent, /第 1 \/ 1 题/);
+});
+
 test('full app submit/next handlers distinguish single, incomplete multiple, and boolean answers', () => {
   const dom = boot();
   dom.get('submit-btn').click();

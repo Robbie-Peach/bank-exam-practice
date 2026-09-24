@@ -1,10 +1,10 @@
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
 const root=path.resolve(__dirname,'..'),C=require('../core.js');
 const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8').replace(/^\uFEFF/,''));
-const bank=C.validateQuestions(['data/v1-questions.json','data/original-questions.json','data/open-questions.json','data/recalled-questions.json'].flatMap(read));
+const bank=C.validateQuestions(['data/v1-questions.json','data/original-questions.json','data/open-questions.json','data/recalled-questions.json','data/notes-questions.json'].flatMap(read));
 const sourceData=read('research/sources.json');
 const resources=Array.isArray(sourceData)?sourceData:(sourceData.resources||sourceData.sources||[]);
-const data={version:'2026.09.20-r2',questions:bank,resources};
+const data={version:'2026.09.24-notes1',questions:bank,resources};
 fs.writeFileSync(path.join(root,'data.js'),'window.BANK_DATA = '+JSON.stringify(data,null,2)+';\n');
 const files=['index.html','styles.css','core.js','app.js','data.js','icon.svg','manifest.webmanifest','ATTRIBUTION.html'];
 const hash=crypto.createHash('sha256').update('install-http-cache-reload-v2');

@@ -125,6 +125,19 @@ test('filters intersect and wrong/favorite/unseen states are independent', () =>
   assert.throws(() => core.buildQueue(questions, { mode: 'invalid' }, records), /练习模式/);
 });
 
+test('notes-only filter selects tagged original questions without relabeling source identity', () => {
+  const questions = [
+    question('note-law', { tags: ['笔记原创', '存款'] }),
+    question('note-finance', { subject: 'finance', tags: ['笔记原创', '复利'] }),
+    question('other-original'),
+    sourceQuestion('fake-note-tag', 'open', { tags: ['笔记原创'] })
+  ];
+  assert.deepEqual(core.buildQueue(questions, { source: 'notes_original' }, {}).map(q => q.id), ['note-law', 'note-finance']);
+  assert.deepEqual(core.buildQueue(questions, { subject: 'finance', source: 'notes_original' }, {}).map(q => q.id), ['note-finance']);
+  assert.equal(core.buildQueue(questions, { source: 'original' }, {}).length, 3);
+  assert.equal(questions[0].source.kind, 'original');
+});
+
 test('random queue never loses or duplicates a question or mutates the input', () => {
   const questions = Array.from({ length: 100 }, (_, i) => question(`q${i}`));
   const original = questions.map(q => q.id);

@@ -3,24 +3,25 @@ const test=require('node:test'),assert=require('node:assert/strict'),fs=require(
 const root=path.resolve(__dirname,'..'),C=require('../core.js');
 const read=f=>JSON.parse(fs.readFileSync(path.join(root,f),'utf8').replace(/^\uFEFF/,''));
 const rows=read('data/recalled-questions.json');
+const notes=read('data/notes-questions.json');
 const context={window:{}};vm.runInNewContext(fs.readFileSync(path.join(root,'docs/data.js'),'utf8'),context);
 const data=JSON.parse(JSON.stringify(context.window.BANK_DATA));
-test('release contains five recalled questions, not external advertised counts',()=>{
-  assert.equal(data.version,'2026.09.20-r2');assert.equal(data.questions.length,156);
+test('release preserves five recalled questions beside the new notes-original pack',()=>{
+  assert.equal(data.version,'2026.09.24-notes1');assert.equal(data.questions.length,156+notes.length);
   assert.equal(rows.length,5);assert.equal(rows.filter(q=>q.subject==='law').length,2);
   assert.equal(rows.filter(q=>q.subject==='finance').length,3);
   assert.deepEqual(data.questions.filter(q=>q.source.kind==='recalled'),C.validateQuestions(rows));
   assert.equal(data.questions.filter(q=>q.source.kind==='open').length,15);
-  assert.equal(data.questions.filter(q=>q.source.kind==='original').length,136);
+  assert.equal(data.questions.filter(q=>q.source.kind==='original').length,136+notes.length);
   assert.equal(data.questions.filter(q=>['official_past','publication'].includes(q.source.kind)).length,0);
 });
-test('source priority starts with actual recalled questions and preserves all existing 151',()=>{
+test('source priority starts with recalled questions and preserves all pre-existing 151',()=>{
   const original=C.validateQuestions(['data/v1-questions.json','data/original-questions.json','data/open-questions.json'].flatMap(read));
-  assert.deepEqual(data.questions.filter(q=>q.source.kind!=='recalled'),original);
+  assert.deepEqual(data.questions.filter(q=>q.source.kind!=='recalled'),[...original,...C.validateQuestions(notes)]);
   const queue=C.buildQueue(data.questions,{order:'priority'},{});
   assert.deepEqual(queue.slice(0,5).map(q=>q.id),rows.map(q=>q.id));
   const filtered=C.buildQueue(data.questions,{source:'recalled',order:'priority'},{});
-  assert.equal(filtered.length,5);assert.equal(new Set(queue.map(q=>q.id)).size,156);
+  assert.equal(filtered.length,5);assert.equal(new Set(queue.map(q=>q.id)).size,156+notes.length);
 });
 test('each short recall has one distinct article, original answer, exam location and independent evidence',()=>{
   assert.deepEqual(rows.map(q=>q.answer),[[0],[2],[2],[2],[2]]);
@@ -42,7 +43,7 @@ test('historical context, original option text and caches are not silently relab
   assert.equal(rows.find(q=>q.id.includes('202110')).options[3],'平衡性基金');
   assert.match(fs.readFileSync(path.join(root,'sw.js'),'utf8'),/SKIP_WAITING/);
   const attribution=fs.readFileSync(path.join(root,'ATTRIBUTION.html'),'utf8');
-  assert.match(attribution,/目前共 156 道/);assert.match(attribution,/回忆版 5/);
+  assert.match(attribution,new RegExp(`目前共 ${156+notes.length} 道`));assert.match(attribution,/回忆版 5/);
   assert.doesNotMatch(attribution,/官方真题、回忆版、出版物练习题直接收录量均为 0/);
 });
 test('service worker installation bypasses stale HTTP asset caches instead of recaching old questions',async()=>{
